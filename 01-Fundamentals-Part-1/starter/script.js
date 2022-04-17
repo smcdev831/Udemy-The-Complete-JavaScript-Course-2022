@@ -249,4 +249,97 @@ let descriptionP = `A ${countryP} is in ${continentP}, and its ${populationP} mi
 console.log(descriptionP);
 
 ////////////////////////////////////
-//If/Else Statements
+//Taking Decisions: if / else Statements
+
+const ageI = 15;
+
+if (ageI >= 18) {
+    console.log('Sarah can start drivng license 🚗');
+} else {
+    let yearsLeft = 18 - ageI;
+    console.log(`Sarah is too young. Wait another ${yearsLeft} years :)`);
+}
+
+let century;
+let birthYearI = 2012;
+if (birthYearI <= 2000) {
+    century = 20;
+} else {
+    century = 21;
+}
+
+console.log(century);
+
+// LECTURE: Taking Decisions: if / else Statements 
+// 1. If your country's population is greater that 33 million, log a string like this to the 
+// console: 'Portugal's population is above average'. Otherwise, log a string like 
+// 'Portugal's population is 22 million below average' (the 22 is the average of 33 
+// minus the country's population) 
+// 2. After checking the result, change the population temporarily to 13 and then to 
+// 130. See the different results, and set the population back to original
+
+if (population < averagePopulation ) {
+    let populationDifference = (averagePopulation - population)
+    console.log(`${country}'s population is ${populationDifference} million below average`);
+} else {
+    let populationDifference = (population - averagePopulation)
+    console.log(`${country}'s population is ${populationDifference} million above average`);
+}
+
+
+
+////////////////////////////////////
+// Coding Challenge #2 
+// Use the BMI example from Challenge #1, and the code you already wrote, and 
+// improve it. 
+// Your tasks: 
+// 1. Print a nice output to the console, saying who has the higher BMI. The message 
+// is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!" 
+// 2. Use a template literal to include the BMI values in the outputs. Example: "Mark's 
+// BMI (28.3) is higher than John's (23.9)!" 
+// Hint: Use an if/else statement 😉 
+ 
+// GOOD LUCK 😀
+
+//Test Data 1
+markWeight = 78;
+markHeight = 1.69;
+johnWeight = 92;
+johnHeight = 1.95;
+
+bmiMark = markWeight / markHeight ** 2;
+bmiJohn = johnWeight / johnHeight ** 2;
+console.log(bmiMark);
+console.log(bmiJohn);
+
+markHigherBMI = bmiMark > bmiJohn;
+console.log(markHigherBMI);
+
+if (bmiMark > bmiJohn) {
+    console.log(`Mark's BMI (${bmiMark}) is higher than John's (${bmiJohn})`);
+} else {
+    console.log(`John's BMI (${bmiJohn}) is higher than Marks's (${bmiMark})`);
+}
+
+//Test Data 2
+markWeight = 95;
+markHeight = 1.88;
+johnWeight = 85;
+johnHeight = 1.76;
+
+bmiMark = markWeight / markHeight ** 2;
+bmiJohn = johnWeight / johnHeight ** 2;
+console.log(bmiMark);
+console.log(bmiJohn);
+
+markHigherBMI = bmiMark > bmiJohn;
+console.log(markHigherBMI);
+
+if (bmiMark > bmiJohn) {
+    console.log(`Mark's BMI (${bmiMark}) is higher than John's (${bmiJohn})`);
+} else {
+    console.log(`John's BMI (${bmiJohn}) is higher than Marks's (${bmiMark})`);
+}
+
+////////////////////////////////////
+//Type Conversion and Coercion
