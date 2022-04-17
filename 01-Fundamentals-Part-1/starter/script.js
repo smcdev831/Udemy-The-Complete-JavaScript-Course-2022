@@ -189,8 +189,8 @@ let markHeight = 1.69;
 let johnWeight = 92;
 let johnHeight = 1.95;
 
-let bmiMark = markWeight / markHeight ** 2 / (markHeight * markHeight);
-let bmiJohn = johnWeight / johnHeight ** 2 / (johnHeight * johnHeight);
+let bmiMark = markWeight / markHeight ** 2;
+let bmiJohn = johnWeight / johnHeight ** 2;
 console.log(bmiMark);
 console.log(bmiJohn);
 
@@ -203,8 +203,8 @@ markHeight = 1.88;
 johnWeight = 85;
 johnHeight = 1.76;
 
-bmiMark = markWeight / markHeight ** 2 / (markHeight * markHeight)
-bmiJohn = johnWeight / johnHeight ** 2 / (johnHeight * johnHeight)
+bmiMark = markWeight / markHeight ** 2;
+bmiJohn = johnWeight / johnHeight ** 2;
 console.log(bmiMark);
 console.log(bmiJohn);
 
@@ -212,3 +212,41 @@ markHigherBMI = bmiMark > bmiJohn;
 console.log(markHigherBMI);
 
 ////////////////////////////////////
+//Strings and Template Literals
+
+let firstNameJ = 'Jonas';
+let jobJ = 'teacher';
+const birthYearJ = 1991;
+let yearJ = 2037;
+
+const jonas = "I'm " + firstNameJ + ', a ' + (yearJ - birthYearJ) + ' years old ' + jobJ + '!';
+console.log(jonas);
+
+const jonasNew = `I'm ${firstNameJ}, a ${yearJ - birthYearJ} years old ${jobJ}!`
+console.log(jonasNew);
+
+console.log('Just a regular string...');
+
+console.log('String with \n\
+multiple \n\
+lines');
+
+console.log(`String
+multiple
+lines`); //must use backticks
+
+// LECTURE: Strings and Template Literals 
+// 1. Recreate the 'description' variable from the last assignment, this time 
+// using the template literal syntax
+
+let countryP = 'Portugal';
+let continentP = 'Europe';
+let populationP = 11;
+let languageP = 'portuguese'
+
+let descriptionP = `A ${countryP} is in ${continentP}, and its ${populationP} million people speak ${languageP}`;
+
+console.log(descriptionP);
+
+////////////////////////////////////
+//If/Else Statements
