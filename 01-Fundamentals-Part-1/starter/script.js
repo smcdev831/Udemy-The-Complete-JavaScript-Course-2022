@@ -1,3 +1,4 @@
+////////////////////////////////////
 //linking Javascript file
 let js = 'amazing';
 console.log(40 + 8 + 23 - 10);
@@ -11,6 +12,7 @@ console.log(firstName);
 console.log(firstName);
 console.log(firstName);
 
+////////////////////////////////////
 //Variable name conventions
 
 let jonas_matilda = 'JM';
@@ -32,7 +34,7 @@ console.log(myFirstJob);
 // assign their values according to your own country (population in millions) 
 // 2. Log their values to the console
 
-let country = 'United States of America';
+const country = 'United States of America';
 let continent = 'North America';
 let population = 329;
 
@@ -40,6 +42,7 @@ console.log(country);
 console.log(continent);
 console.log(population);
 
+////////////////////////////////////
 //Data Types
 
 let javascriptIsFun = true;
@@ -62,5 +65,44 @@ console.log(typeof year);
 
 console.log(typeof null);
 
+// LECTURE: Data Types 
+// 1. Declare a variable called 'isIsland' and set its value according to your 
+// country. The variable should hold a Boolean value. Also declare a variable 
+// 'language', but don't assign it any value yet 
+// 2. Log the types of 'isIsland', 'population', 'country' and 'language' 
+// to the console
+
+let isIsland = false;
+let language;
+console.log(isIsland);
+console.log(population);
+console.log(country);
+console.log(language);
+
+////////////////////////////////////
 //Let, Const, Var
 
+let age = 30;
+age = 31;
+
+const birthYear = 1991;
+//birthYear = 1990;
+
+var job = 'programmer';
+job = 'teacher';
+
+lastName = 'Schmedtmann'
+console.log(lastName);
+
+// LECTURE: let, const and var 
+// 1. Set the value of 'language' to the language spoken where you live (some 
+// countries have multiple languages, but just choose one) 
+// 2. Think about which variables should be const variables (which values will never 
+// change, and which might change?). Then, change these variables to const. 
+// 3. Try to change one of the changed variables now, and observe what happens
+
+language = 'English';
+country = Russia;
+
+////////////////////////////////////
+//Basic operators
