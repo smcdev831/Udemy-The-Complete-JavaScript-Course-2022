@@ -376,5 +376,57 @@ console.log(n);
 console.log('9' - '5'); //4
 console.log('19' - '13' + '17'); //617
 console.log('19' - '13' + 17); //23
-console.log('123' < 57); //True
+console.log('123' < 57); //false
 console.log(5 + 6 + '4' + 9 - 4 - 2); //1143
+
+////////////////////////////////////
+//Truthy and Falsy Values
+
+//falsy = 0, '', undefined, null, NaN, false
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean('Jonas'));
+console.log(Boolean({}));
+console.log(Boolean(''));
+
+let money = 100;
+
+if (money) {
+    console.log("Don't spend it all ;)");
+} else {
+    console.log('You should get a job');
+}
+
+let height = 0;
+if (height) {
+    console.log('YAY! Height is defined');
+} else {
+    console.log('Height is UNDEFINED');
+}
+
+////////////////////////////////////
+//Equality Operators: == vs. ===
+
+let age1 = 18;
+
+if (age1 === 18) console.log('You just became an adult:D');
+
+// LECTURE: Equality Operators: == vs. === 
+// 1. Declare a variable 'numNeighbours' based on a prompt input like this: 
+// prompt('How many neighbour countries does your country 
+// have?'); 
+// 2. If there is only 1 neighbour, log to the console 'Only 1 border!' (use loose equality 
+// == for now) 
+// 3. Use an else-if block to log 'More than 1 border' in case 'numNeighbours' 
+// is greater than 1 
+// 4. Use an else block to log 'No borders' (this block will be executed when 
+// 'numNeighbours' is 0 or any other value) 
+// 5. Test the code with different values of 'numNeighbours', including 1 and 0. 
+// 6. Change == to ===, and test the code again, with the same values of 
+// 'numNeighbours'. Notice what happens when there is exactly 1 border! Why 
+// is this happening? 
+// 7. Finally, convert 'numNeighbours' to a number, and watch what happens now 
+// when you input 1 
+// 8. Reflect on why we should use the === operator and type conversion in this 
+// situation
