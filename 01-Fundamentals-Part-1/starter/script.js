@@ -410,7 +410,26 @@ if (height) {
 
 let age1 = 18;
 
-if (age1 === 18) console.log('You just became an adult:D');
+if (age1 === 18) console.log('You just became an adult :D (strict)');
+if (age1 == 18) console.log('You just became an adult :D (loose)');
+
+let favorite = Number(prompt('What is your favorite number?'));
+console.log(favorite);
+console.log(typeof favorite);
+
+if (favorite === 23) {
+    console.log('Cool! 23 is an amazing number');
+} if (favorite === 7) {
+    console.log('7 is also a cool number');
+} else if (favorite === 9) {
+    console.log('9 is also a cool number');
+} else {
+    console.log('Number is not 23 or 7 or 9');
+}
+
+if (favorite !== 23) {
+    console.log('Why not 23?');
+}
 
 // LECTURE: Equality Operators: == vs. === 
 // 1. Declare a variable 'numNeighbours' based on a prompt input like this: 
@@ -430,3 +449,13 @@ if (age1 === 18) console.log('You just became an adult:D');
 // when you input 1 
 // 8. Reflect on why we should use the === operator and type conversion in this 
 // situation
+
+let numNeighbours = Number(prompt('How many neighbour countries does your country have?'));
+
+if (numNeighbours === 1) {
+    console.log('Only 1 border!');
+} else if (numNeighbours > 1) {
+    console.log('More than 1 border');
+} else {
+    console.log('No borders');
+}
