@@ -459,3 +459,6 @@ if (numNeighbours === 1) {
 } else {
     console.log('No borders');
 }
+
+////////////////////////////////////
+//Boolean Logic
