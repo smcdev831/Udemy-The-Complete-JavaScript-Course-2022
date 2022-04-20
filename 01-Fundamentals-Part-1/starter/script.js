@@ -564,10 +564,10 @@ if (dolphinsAvg > koalaAvg || koalaAvg > dolphinsAvg) {
 
 //Data Bonus 1
 dolphinScore1 = 97;
-dolphinScore2 = 2;
+dolphinScore2 = 112;
 dolphinScore3 = 101;
 
-koalaScore1 = 5;
+koalaScore1 = 109;
 koalaScore2 = 95;
 koalaScore3 = 123;
 
@@ -576,8 +576,38 @@ console.log(dolphinsAvg);
 koalaAvg = (koalaScore1 + koalaScore2 + koalaScore3) / 3;
 console.log(koalaAvg);
 
-if ((dolphinsAvg || koalaAvg > 100) && (dolphinsAvg > koalaAvg || koalaAvg > dolphinsAvg)) {
-    console.log('We have a winner!');
+if (dolphinsAvg > 100 || koalaAvg > 100 && dolphinsAvg > koalaAvg) {
+    console.log(`${team1} wins the trophy`);
+} else if (dolphinsAvg > 100  || koalaAvg > 100 && koalaAvg > dolphinsAvg) {
+    console.log(`${team2} wins the trophy`);
 } else {
     console.log('No one scored over 100 points');
 }
+
+//Data Bonus 2
+
+dolphinScore1 = 97;
+dolphinScore2 = 112;
+dolphinScore3 = 101;
+
+koalaScore1 = 109;
+koalaScore2 = 95;
+koalaScore3 = 106;
+
+dolphinsAvg = (dolphinScore1 + dolphinScore2 + dolphinScore3) / 3;
+console.log(dolphinsAvg);
+koalaAvg = (koalaScore1 + koalaScore2 + koalaScore3) / 3;
+console.log(koalaAvg);
+
+if (dolphinsAvg === koalaAvg && dolphinsAvg > 100 || koalaAvg > 100) {
+    console.log("It's a draw!");
+} else if (dolphinsAvg > 100 || koalaAvg > 100 && dolphinsAvg > koalaAvg) {
+    console.log(`${team1} wins the trophy`);
+} else if (dolphinsAvg > 100 || koalaAvg > 100 && koalaAvg > dolphinsAvg) {
+    console.log(`${team2} wins the trophy`);
+} else {
+    console.log('No one scored over 100 points');
+}
+
+////////////////////////////////////
+//Switch Statement
