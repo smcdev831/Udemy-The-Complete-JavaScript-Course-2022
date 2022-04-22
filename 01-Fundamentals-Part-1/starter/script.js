@@ -736,8 +736,16 @@ population >= 33 ? console.log(`${country}'s population is above average`) : con
 // § Value X is between 50 and 300, if it's >= 50 && <= 300 😉 
 // GOOD LUCK 😀
 
-let cost = 150;
-
+//Test Data 1
+let cost = 275;
 tip = cost >= 50 && cost <= 300 ? cost * .15 : cost * .2;
+console.log(`The bill was ${cost}, the tip was ${tip}, and the total value ${cost + tip}`);
 
+cost = 40;
+tip = cost >= 50 && cost <= 300 ? cost * .15 : cost * .2;
+console.log(`The bill was ${cost}, the tip was ${tip}, and the total value ${cost + tip}`);
+
+
+cost = 430;
+tip = cost >= 50 && cost <= 300 ? cost * .15 : cost * .2;
 console.log(`The bill was ${cost}, the tip was ${tip}, and the total value ${cost + tip}`);
