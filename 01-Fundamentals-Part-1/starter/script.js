@@ -735,3 +735,9 @@ population >= 33 ? console.log(`${country}'s population is above average`) : con
 // § To calculate 20% of a value, simply multiply it by 20/100 = 0.2 
 // § Value X is between 50 and 300, if it's >= 50 && <= 300 😉 
 // GOOD LUCK 😀
+
+let cost = 150;
+
+tip = cost >= 50 && cost <= 300 ? cost * .15 : cost * .2;
+
+console.log(`The bill was ${cost}, the tip was ${tip}, and the total value ${cost + tip}`);
