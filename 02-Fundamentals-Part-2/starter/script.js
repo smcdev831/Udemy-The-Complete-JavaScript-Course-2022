@@ -63,7 +63,21 @@ let scotland = describeCountry('Scotland', 5.454, 'Edinburgh')
 ////////////////////////////////////
 // Function Declarations vs Expressions
 
+//declaration
+function calcAge1(birthYear) {
+    return 2037 - birthYear;
+}
 
+let age1 = calcAge1(1991);
+console.log(age1);
+
+//expression
+let calcAge2 = function(birthYear) {
+    return 2037 - birthYear;
+}
+
+let age2 = calcAge2(1991);
+console.log(age1, age2);
 
 // LECTURE: Function Declarations vs. Expressions 
 // 1. The world population is 7900 million people. Create a function declaration 
@@ -79,12 +93,59 @@ let scotland = describeCountry('Scotland', 5.454, 'Edinburgh')
 // 'percentageOfWorld2', and also call it with 3 country populations (can be 
 // the same populations)
 
+function percentageOfWorld1(population) {
+    return (population / 7900) * 100
+}
+
+let finlandPercent = percentageOfWorld1(6);
+let usaPercent = percentageOfWorld1(329.5);
+let scotlandPercent = percentageOfWorld1(5.454)
+
+console.log(finlandPercent);
+console.log(usaPercent);
+console.log(scotlandPercent);
+
+let percentageOfWorld2 = function(population) {
+    return (population / 7900) * 100
+}
+
+finlandPercent = percentageOfWorld2(6);
+usaPercent = percentageOfWorld2(329.5);
+scotlandPercent = percentageOfWorld2(5.454)
+
+console.log(finlandPercent);
+console.log(usaPercent);
+console.log(scotlandPercent);
+
 ////////////////////////////////////
 // Arrow Functions
+
+let calcAge3 = birthYear => 2037 - birthYear;
+let age3 = calcAge3(1991);
+console.log(age3);
+
+let yearsUntilRetirement = (birthYear, firstName) => {
+    let age = 2037 - birthYear;
+    let retirement = 65 - age;
+    return `${firstName} retires in ${retirement} years`;
+}
+
+console.log(yearsUntilRetirement(1991, 'Jonas'));
+console.log(yearsUntilRetirement(1980, 'Bob'));
 
 // LECTURE: Arrow Functions 
 // 1. Recreate the last assignment, but this time create an arrow function called 
 // 'percentageOfWorld3'
+
+let percentageOfWorld3 = (population) => (population / 7900) * 100;
+
+finlandPercent = percentageOfWorld3(6);
+usaPercent = percentageOfWorld3(329.5);
+scotlandPercent = percentageOfWorld3(5.454)
+
+console.log(finlandPercent);
+console.log(usaPercent);
+console.log(scotlandPercent);
 
 ////////////////////////////////////
 // Functions calling Functions
@@ -126,5 +187,4 @@ let scotland = describeCountry('Scotland', 5.454, 'Edinburgh')
 // § To calculate average of 3 values, add them all together and divide by 3 
 // § To check if number A is at least double number B, check for A >= 2 * B. 
 // Apply this to the team's average scores 😉 
- 
 // GOOD LUCK 😀
