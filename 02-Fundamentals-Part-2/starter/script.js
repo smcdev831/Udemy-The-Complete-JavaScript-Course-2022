@@ -150,6 +150,19 @@ console.log(scotlandPercent);
 ////////////////////////////////////
 // Functions calling Functions
 
+function cutFruitPieces(fruit) {
+    return fruit * 4
+}
+
+function fruitProcessor(apples, oranges) {
+    let applePieces = cutFruitPieces(apples)
+    let orangePieces = cutFruitPieces(oranges)
+    let juice = `Juice with ${applePieces} pieces of apple, and ${orangePieces} pieces of orange.`
+    return juice;
+}
+
+console.log(fruitProcessor(2, 3));
+
 // LECTURE: Functions Calling Other Functions 
 // 1. Create a function called 'describePopulation'. Use the function type you 
 // like the most. This function takes in two arguments: 'country' and 
