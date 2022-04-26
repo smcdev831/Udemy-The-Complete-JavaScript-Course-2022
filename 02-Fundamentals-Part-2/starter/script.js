@@ -172,6 +172,15 @@ console.log(fruitProcessor(2, 3));
 // 'percentageOfWorld1' you created earlier 
 // 3. Call 'describePopulation' with data for 3 countries of your choice
 
+function describePopulation(country, population) {
+    let populationPercent = percentageOfWorld1(population)
+    return `${country} has ${population} million people, which is about ${populationPercent}% of the world`    
+}
+
+console.log(describePopulation('Finland', 6));
+console.log(describePopulation('United States of America', 329.5));
+console.log(describePopulation('Scotland', 5.454));
+
 ////////////////////////////////////
 // Reviewing Functions
 
