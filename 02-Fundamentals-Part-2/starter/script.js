@@ -184,6 +184,26 @@ console.log(describePopulation('Scotland', 5.454));
 ////////////////////////////////////
 // Reviewing Functions
 
+let calcAge = function (birthYear) {
+    return 2037 - birthYear;
+}
+
+yearsUntilRetirement = function(birthYear, firstName) {
+    let age = calcAge(birthYear)
+    let retirement = 65 - age;
+
+    if (retirement > 0) {
+        console.log(`${firstName} retires in ${retirement} years`);
+        return retirement
+    } else {
+        console.log(`${firstName} has already retired`);
+        return -1
+    }
+}
+
+console.log(yearsUntilRetirement(1991, 'Jonas'));
+console.log(yearsUntilRetirement(1950, 'Mike'));
+
 ////////////////////////////////////
 // Coding Challenge #1 
 // Back to the two gymnastics teams, the Dolphins and the Koalas! There is a new 
@@ -210,3 +230,23 @@ console.log(describePopulation('Scotland', 5.454));
 // § To check if number A is at least double number B, check for A >= 2 * B. 
 // Apply this to the team's average scores 😉 
 // GOOD LUCK 😀
+
+let calcAverage = (score1, score2, score3) =>  (score1 + score2 + score3) / 3
+
+function checkWinner(scoreD1, scoreD2, scoreD3, scoreK1, scoreK2, scoreK3) {
+    let avgDolphins = calcAverage(scoreD1, scoreD2, scoreD3)
+    let avgKoalas = calcAverage(scoreK1, scoreK2, scoreK3)
+    if (avgDolphins >= (avgKoalas * 2)) {
+        console.log(`Dolphins win (${avgDolphins} - ${avgKoalas})`);
+    } else if ((avgDolphins * 2) <= avgKoalas){
+        console.log(`Koalas win (${avgKoalas} - ${avgDolphins})`);
+    } else {
+        console.log('No one wins!');
+    }
+}
+
+//Test Data 1
+checkWinner(44, 23, 71, 65, 54, 49)
+
+//Test Data 2
+checkWinner(85, 54, 41, 23, 34, 27)
