@@ -254,6 +254,25 @@ checkWinner(85, 54, 41, 23, 34, 27)
 ////////////////////////////////////
 //Intro to Arrays
 
+let friend1 = 'Michael';
+let friend2 = 'Steven';
+let friend3 = 'Peter';
+
+let friends = ['Michael', 'Steven', 'Peter']
+console.log(friends);
+
+let years = new Array(1991, 1984, 2000, 2020)
+console.log(years);
+
+console.log(friends[0]);
+console.log(friends[2]);
+
+console.log(friends.length);
+console.log(friends[friends.length -1]);
+
+friends[2] = 'Jay'
+console.log(friends);
+
 // LECTURE: Introduction to Arrays 
 // 1. Create an array containing 4 population values of 4 countries of your choice. 
 // You may use the values you have been using previously. Store this array into a 
