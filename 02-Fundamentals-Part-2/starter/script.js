@@ -312,6 +312,10 @@ console.log(percentages);
 ////////////////////////////////////
 // Basic Array Operations
 
+friends = ['Michael', 'Steven', 'Peter']
+friends.push('Jay')
+console.log(friends);
+
 // LECTURE: Basic Array Operations (Methods) 
 // 1. Create an array containing all the neighbouring countries of a country of your 
 // choice. Choose a country which has at least 2 or 3 neighbours. Store the array 
