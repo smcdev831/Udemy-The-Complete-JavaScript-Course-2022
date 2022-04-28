@@ -273,6 +273,26 @@ console.log(friends[friends.length -1]);
 friends[2] = 'Jay'
 console.log(friends);
 
+// friends = ['Bob', 'Alice']
+
+let firstName = 'Jonas'
+let jonas = [firstName, 'Schmedtmann', 2037-1991, 'teacher', friends]
+console.log(jonas);
+console.log(jonas.length);
+
+//Exercise
+
+years = [1990, 1967, 2002, 2010, 2018]
+
+age1 = calcAge(years[0]);
+age2 = calcAge(years[1]);
+age3 = calcAge(years[years.length-1]);
+
+console.log(age1, age2, age3);
+
+let ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length-1])]
+console.log(ages);
+
 // LECTURE: Introduction to Arrays 
 // 1. Create an array containing 4 population values of 4 countries of your choice. 
 // You may use the values you have been using previously. Store this array into a 
@@ -282,6 +302,12 @@ console.log(friends);
 // world population for these 4 population values. Use the function 
 // 'percentageOfWorld1' that you created earlier to compute the 4 
 // percentage values
+
+let populations = [329.5, 5.454, 6, 38.01];
+console.log(populations.length === 4);
+
+let percentages = [percentageOfWorld1(populations[0]), percentageOfWorld1(populations[1]), percentageOfWorld1(populations[2]), percentageOfWorld1(populations[3])]
+console.log(percentages);
 
 ////////////////////////////////////
 // Basic Array Operations
