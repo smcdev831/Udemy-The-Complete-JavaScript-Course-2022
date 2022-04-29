@@ -503,7 +503,7 @@ let mark = {
     height: 1.69,
 
     calcBMI: function() {
-        let markBMI = this.mass / this.height ** 2
+        this.mass / this.height ** 2
     }
 };
 
@@ -514,7 +514,7 @@ let john = {
     height: 1.95,
 
     calcBMI: function() {
-        let johnBMI = this.mass / this.height ** 2
+        this.mass / this.height ** 2
     }
 };
 
