@@ -45,12 +45,8 @@ let num = Number('23')
 
 
 // LECTURE: Functions 
-// 1. Write a function called 'describeCountry' which takes three parameters: 
-// 'country', 'population' and 'capitalCity'. Based on this input, the 
-// function returns a string with this format: 'Finland has 6 million people and its 
-// capital city is Helsinki' 
-// 2. Call this function 3 times, with input data for 3 different countries. Store the 
-// returned values in 3 different variables, and log them to the console
+// 1. Write a function called 'describeCountry' which takes three parameters: 'country', 'population' and 'capitalCity'. Based on this input, the function returns a string with this format: 'Finland has 6 million people and its capital city is Helsinki' 
+// 2. Call this function 3 times, with input data for 3 different countries. Store the returned values in 3 different variables, and log them to the console
 
 function describeCountry(country, population, capitalCity) {
     console.log(`${country} has ${population} million people and it's capital city is ${capitalCity}`);
@@ -80,18 +76,10 @@ let age2 = calcAge2(1991);
 console.log(age1, age2);
 
 // LECTURE: Function Declarations vs. Expressions 
-// 1. The world population is 7900 million people. Create a function declaration 
-// called 'percentageOfWorld1' which receives a 'population' value, and 
-// returns the percentage of the world population that the given population 
-// represents. For example, China has 1441 million people, so it's about 18.2% of 
-// the world population 
-// 2. To calculate the percentage, divide the given 'population' value by 7900 
-// and then multiply by 100 
-// 3. Call 'percentageOfWorld1' for 3 populations of countries of your choice, 
-// store the results into variables, and log them to the console 
-// 4. Create a function expression which does the exact same thing, called 
-// 'percentageOfWorld2', and also call it with 3 country populations (can be 
-// the same populations)
+// 1. The world population is 7900 million people. Create a function declaration called 'percentageOfWorld1' which receives a 'population' value, and returns the percentage of the world population that the given population represents. For example, China has 1441 million people, so it's about 18.2% of the world population 
+// 2. To calculate the percentage, divide the given 'population' value by 7900 and then multiply by 100 
+// 3. Call 'percentageOfWorld1' for 3 populations of countries of your choice, store the results into variables, and log them to the console 
+// 4. Create a function expression which does the exact same thing, called 'percentageOfWorld2', and also call it with 3 country populations (can be the same populations)
 
 function percentageOfWorld1(population) {
     return (population / 7900) * 100
@@ -134,8 +122,7 @@ console.log(yearsUntilRetirement(1991, 'Jonas'));
 console.log(yearsUntilRetirement(1980, 'Bob'));
 
 // LECTURE: Arrow Functions 
-// 1. Recreate the last assignment, but this time create an arrow function called 
-// 'percentageOfWorld3'
+// 1. Recreate the last assignment, but this time create an arrow function called 'percentageOfWorld3'
 
 let percentageOfWorld3 = (population) => (population / 7900) * 100;
 
@@ -164,12 +151,8 @@ function fruitProcessor(apples, oranges) {
 console.log(fruitProcessor(2, 3));
 
 // LECTURE: Functions Calling Other Functions 
-// 1. Create a function called 'describePopulation'. Use the function type you 
-// like the most. This function takes in two arguments: 'country' and 
-// 'population', and returns a string like this: 'China has 1441 million people, 
-// which is about 18.2% of the world.' 
-// 2. To calculate the percentage, 'describePopulation' call the 
-// 'percentageOfWorld1' you created earlier 
+// 1. Create a function called 'describePopulation'. Use the function type you like the most. This function takes in two arguments: 'country' and 'population', and returns a string like this: 'China has 1441 million people, which is about 18.2% of the world.' 
+// 2. To calculate the percentage, 'describePopulation' call the 'percentageOfWorld1' you created earlier 
 // 3. Call 'describePopulation' with data for 3 countries of your choice
 
 function describePopulation(country, population) {
@@ -206,29 +189,19 @@ console.log(yearsUntilRetirement(1950, 'Mike'));
 
 ////////////////////////////////////
 // Coding Challenge #1 
-// Back to the two gymnastics teams, the Dolphins and the Koalas! There is a new 
-// gymnastics discipline, which works differently. 
-// Each team competes 3 times, and then the average of the 3 scores is calculated (so 
-// one average score per team). 
-// A team only wins if it has at least double the average score of the other team. 
-// Otherwise, no team wins! 
+// Back to the two gymnastics teams, the Dolphins and the Koalas! There is a new gymnastics discipline, which works differently. Each team competes 3 times, and then the average of the 3 scores is calculated (so one average score per team). A team only wins if it has at least double the average score of the other team. Otherwise, no team wins! 
 // Your tasks: 
 // 1. Create an arrow function 'calcAverage' to calculate the average of 3 scores 
 // 2. Use the function to calculate the average for both teams 
-// 3. Create a function 'checkWinner' that takes the average score of each team 
-// as parameters ('avgDolhins' and 'avgKoalas'), and then logs the winner 
-// to the console, together with the victory points, according to the rule above. 
-// Example: "Koalas win (30 vs. 13)" 
-// 4. Use the 'checkWinner' function to determine the winner for both Data 1 and 
-// Data 2 
+// 3. Create a function 'checkWinner' that takes the average score of each team as parameters ('avgDolhins' and 'avgKoalas'), and then logs the winner to the console, together with the victory points, according to the rule above. Example: "Koalas win (30 vs. 13)" 
+// 4. Use the 'checkWinner' function to determine the winner for both Data 1 and Data 2 
 // 5. Ignore draws this time 
 // Test data: 
 // § Data 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49 
 // § Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27 
 // Hints: 
 // § To calculate average of 3 values, add them all together and divide by 3 
-// § To check if number A is at least double number B, check for A >= 2 * B. 
-// Apply this to the team's average scores 😉 
+// § To check if number A is at least double number B, check for A >= 2 * B. Apply this to the team's average scores 😉 
 // GOOD LUCK 😀
 
 let calcAverage = (score1, score2, score3) =>  (score1 + score2 + score3) / 3
@@ -294,14 +267,9 @@ let ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length-1])
 console.log(ages);
 
 // LECTURE: Introduction to Arrays 
-// 1. Create an array containing 4 population values of 4 countries of your choice. 
-// You may use the values you have been using previously. Store this array into a 
-// variable called 'populations' 
+// 1. Create an array containing 4 population values of 4 countries of your choice. You may use the values you have been using previously. Store this array into a variable called 'populations' 
 // 2. Log to the console whether the array has 4 elements or not (true or false) 
-// 3. Create an array called 'percentages' containing the percentages of the 
-// world population for these 4 population values. Use the function 
-// 'percentageOfWorld1' that you created earlier to compute the 4 
-// percentage values
+// 3. Create an array called 'percentages' containing the percentages of the world population for these 4 population values. Use the function 'percentageOfWorld1' that you created earlier to compute the 4 percentage values
 
 let populations = [329.5, 5.454, 6, 38.01];
 console.log(populations.length === 4);
@@ -375,4 +343,55 @@ console.log(neighbours);
 // 4. Bonus: Create an array 'total' containing the total values, so the bill + tip 
 // Test data: 125, 555 and 44 
 // Hint: Remember that an array needs a value in each position, and that value can actually be the returned value of a function! So you can just call a function as array values (so don't store the tip values in separate variables first, but right in the new array) 😉 
+// GOOD LUCK 😀
+
+function calcTip(billValue) {
+    if (billValue >= 50 && billValue <= 300) {
+        return billValue * .15
+    } else {
+        return billValue * .2        
+    }
+}
+
+console.log(calcTip(100));
+console.log(calcTip(10));
+
+let bills = [125, 555, 44]
+console.log(bills);
+
+let tips = [(calcTip(bills[0])), (calcTip(bills[1])), (calcTip(bills[2]))]
+console.log(tips);
+
+let total = [(bills[0]+tips[0]), (bills[1]+tips[1]), (bills[2]+tips[2])];
+console.log(total);
+
+////////////////////////////////////
+//Introduction to Objects
+
+// LECTURE: Introduction to Objects 
+// 1. Create an object called 'myCountry' for a country of your choice, containing properties 'country', 'capital', 'language', 'population' and 'neighbours' (an array like we used in previous assignments)
+
+////////////////////////////////////
+//Dot vs Bracket Notation
+
+// LECTURE: Dot vs. Bracket Notation 
+// 1. Using the object from the previous assignment, log a string like this to the console: 'Finland has 6 million finnish-speaking people, 3 neighbouring countries and a capital called Helsinki.' 
+// 2. Increase the country's population by two million using dot notation, and then decrease it by two million using brackets notation
+
+////////////////////////////////////
+//Object methods
+
+// LECTURE: Object Methods 
+// 1. Add a method called 'describe' to the 'myCountry' object. This method will log a string to the console, similar to the string logged in the previous assignment, but this time using the 'this' keyword. 
+// 2. Call the 'describe' method 
+// 3. Add a method called 'checkIsland' to the 'myCountry' object. This method will set a new property on the object, called 'isIsland'. 'isIsland' will be true if there are no neighbouring countries, and false if there are. Use the ternary operator to set the property.
+
+////////////////////////////////////
+// Coding Challenge #3
+// Let's go back to Mark and John comparing their BMIs! This time, let's use objects to implement the calculations! Remember: BMI = mass / height ** 2 = mass / (height * height) (mass in kg and height in meter) 
+// Your tasks: 
+// 1. For each of them, create an object with properties for their full name, mass, and height (Mark Miller and John Smith) 
+// 2. Create a 'calcBMI' method on each object to calculate the BMI (the same method on both objects). Store the BMI value to a property, and also return it from the method 
+// 3. Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!" 
+// Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall. 
 // GOOD LUCK 😀
