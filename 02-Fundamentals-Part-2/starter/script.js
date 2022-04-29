@@ -495,3 +495,31 @@ myCountry.checkIsland();
 // 3. Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!" 
 // Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall. 
 // GOOD LUCK 😀
+
+let mark = {
+    firstName: 'Mark',
+    lastName: 'Miller',
+    mass: 78,
+    height: 1.69,
+
+    calcBMI: function() {
+        let markBMI = this.mass / this.height ** 2
+    }
+};
+
+let john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    mass: 92,
+    height: 1.95,
+
+    calcBMI: function() {
+        let johnBMI = this.mass / this.height ** 2
+    }
+};
+
+if (mark.calcBMI() > john.calcBMI()) {
+    console.log(`Mark's BMI (${mark.calcBMI()}) is higher than John's (${john.calcBMI()})!`);
+} else {
+    console.log(`John's BMI (${john.calcBMI()}) is higher than Mark's (${mark.calcBMI()})!`);
+}
