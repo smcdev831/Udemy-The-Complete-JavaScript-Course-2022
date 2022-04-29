@@ -368,10 +368,32 @@ console.log(total);
 ////////////////////////////////////
 //Introduction to Objects
 
+let jonasArray = {
+    'Jonas',
+    'Schmedtmann',
+    2037-1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven']
+}
 
+let jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven']
+}
 
 // LECTURE: Introduction to Objects 
 // 1. Create an object called 'myCountry' for a country of your choice, containing properties 'country', 'capital', 'language', 'population' and 'neighbours' (an array like we used in previous assignments)
+
+let myCountry = {
+    country: 'United States of America',
+    capital: 'Washington D.C.',
+    language: 'English',
+    population: 329.5,
+    neighbours: ['Canada', 'Mexico']
+}
 
 ////////////////////////////////////
 //Dot vs Bracket Notation
