@@ -439,12 +439,52 @@ console.log(myCountry.population);
 ////////////////////////////////////
 //Object methods
 
+jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    birthYear: 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicense: true,
+    calcAge: function() {
+        console.log(this);
+        return 2037 - this.birthYear;
+    },
+    driversLicense: function() {
+        if (this.hasDriversLicense === true) {
+            return "he has a driver's license"
+        } else {
+            return "he does not have a driver's license"
+        }
+    }
+};
+
+console.log(jonas);
+console.log(jonas.calcAge());
+console.log(jonas['calcAge']());
+
+//Challenge
+//"Jonas is a 46 year old teacher, and he has a driver's license"
+
+console.log(`${jonas.firstName} is a ${jonas.calcAge()} year old ${jonas.job} and ${jonas.driversLicense()}`);
 
 
 // LECTURE: Object Methods 
 // 1. Add a method called 'describe' to the 'myCountry' object. This method will log a string to the console, similar to the string logged in the previous assignment, but this time using the 'this' keyword. 
 // 2. Call the 'describe' method 
 // 3. Add a method called 'checkIsland' to the 'myCountry' object. This method will set a new property on the object, called 'isIsland'. 'isIsland' will be true if there are no neighbouring countries, and false if there are. Use the ternary operator to set the property.
+
+myCountry.describe = function() {
+    console.log(`${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries, and a capital called ${this.capital}`);
+}
+
+myCountry.describe();
+
+myCountry.checkIsland = function() {
+    console.log(this.neighbours === 0 ? 'is an island' : 'is not an island')
+}
+
+myCountry.checkIsland();
 
 ////////////////////////////////////
 // Coding Challenge #3
