@@ -368,21 +368,24 @@ console.log(total);
 ////////////////////////////////////
 //Introduction to Objects
 
-let jonasArray = {
+let jonasArray = [
     'Jonas',
     'Schmedtmann',
     2037-1991,
     'teacher',
     ['Michael', 'Peter', 'Steven']
-}
+]
+console.log(jonasArray);
 
-let jonas = {
+jonas = {
     firstName: 'Jonas',
     lastName: 'Schmedtmann',
     age: 2037 - 1991,
     job: 'teacher',
     friends: ['Michael', 'Peter', 'Steven']
 }
+
+console.log(jonas);
 
 // LECTURE: Introduction to Objects 
 // 1. Create an object called 'myCountry' for a country of your choice, containing properties 'country', 'capital', 'language', 'population' and 'neighbours' (an array like we used in previous assignments)
@@ -398,12 +401,45 @@ let myCountry = {
 ////////////////////////////////////
 //Dot vs Bracket Notation
 
+console.log(jonas.lastName);
+console.log(jonas['lastName']);
+
+let nameKey = 'Name'
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+
+let interestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends')
+
+if (jonas[interestedIn]) {
+    console.log(jonas[interestedIn]);
+} else {
+    console.log('Wrong request! Choose between firstName, lastName, age, job, and friends');
+}
+
+jonas.locaton = 'Portugal';
+jonas['twitter'] = '@jonasschmedtman';
+console.log(jonas);
+
+//Challenge
+//Jonas has 3 friends and his best friend is called Michael.
+
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is ${jonas.friends[0]}`);
+
 // LECTURE: Dot vs. Bracket Notation 
 // 1. Using the object from the previous assignment, log a string like this to the console: 'Finland has 6 million finnish-speaking people, 3 neighbouring countries and a capital called Helsinki.' 
 // 2. Increase the country's population by two million using dot notation, and then decrease it by two million using brackets notation
 
+console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries, and a capital called ${myCountry.capital}`);
+
+myCountry.population = myCountry.population + 2;
+console.log(myCountry.population);
+myCountry['population'] = myCountry['population'] - 2;
+console.log(myCountry.population);
+
 ////////////////////////////////////
 //Object methods
+
+
 
 // LECTURE: Object Methods 
 // 1. Add a method called 'describe' to the 'myCountry' object. This method will log a string to the console, similar to the string logged in the previous assignment, but this time using the 'this' keyword. 
