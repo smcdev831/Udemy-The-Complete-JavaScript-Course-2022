@@ -612,10 +612,38 @@ console.log(percentages2);
 ////////////////////////////////////
 //Looping backwards and Loops in loops
 
+jonasArray = [
+    'Jonas',
+    'Schmedtmann',
+    2037-1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+    true
+];
+
+for (let i = jonasArray.length -1; i >= 0; i--) {
+    console.log(i, jonasArray[i]);
+}
+
+for (let exercise = 1; exercise <= 3; exercise++) {
+    console.log(`-----Starting Exercise ${exercise}-----`);
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`Exercise ${exercise}: Lifting weights repetition ${rep}`);
+    }
+}
+
 // LECTURE: Looping Backwards and Loops in Loops 
 // 1. Store this array of arrays into a variable called 'listOfNeighbours' [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 'Russia']]; 
 // 2. Log only the neighbouring countries to the console, one by one, not the entire arrays. Log a string like 'Neighbour: Canada' for each country 
 // 3. You will need a loop inside a loop for this. This is actually a bit tricky, so don't worry if it's too difficult for you! But you can still try to figure this out anyway 😉
+
+let listOfNeighbours = [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 'Russia']];
+
+for (let i = 0; i < listOfNeighbours.length; i++) {
+    for (let country = 0; country < listOfNeighbours[i].length; country++) {
+        console.log(`Neighbor: ${listOfNeighbours[i][country]}`);
+    }  
+}
 
 ////////////////////////////////////
 //The while loop
