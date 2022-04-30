@@ -552,10 +552,62 @@ for (let voter = 1; voter <=50; voter++) {
 ////////////////////////////////////
 //Looping arrays, Breaking and Continuing
 
+jonasArray = [
+    'Jonas',
+    'Schmedtmann',
+    2037-1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+    true
+];
+
+let types = [];
+
+for (let i = 0; i < jonasArray.length; i++) {
+    console.log(jonasArray[i], typeof jonasArray[i]);
+
+    //types[i] = typeof jonasArray[i];
+    types.push(typeof jonasArray[i]);
+}
+
+console.log(types);
+
+
+years = [1991, 2007, 1969, 2020];
+ages = [];
+
+for (let i = 0; i < years.length; i++) {
+    ages.push(2037 - years[i]);
+}
+
+console.log(ages);
+
+//continue and break
+
+console.log('---Only Strings---');
+for (let i = 0; i < jonasArray.length; i++) {
+    if (typeof jonasArray[i] !== 'string') continue;
+    console.log(jonasArray[i], typeof jonasArray[i]);
+};
+
+console.log('---Break With Number---');
+for (let i = 0; i < jonasArray.length; i++) {
+    if (typeof jonasArray[i] === 'number') break;
+    console.log(jonasArray[i], typeof jonasArray[i]);
+};
+
 // LECTURE: Looping Arrays, Breaking and Continuing 
 // 1. Let's bring back the 'populations' array from a previous assignment 
 // 2. Use a for loop to compute an array called 'percentages2' containing the percentages of the world population for the 4 population values. Use the function 'percentageOfWorld1' that you created earlier 
 // 3. Confirm that 'percentages2' contains exactly the same values as the 'percentages' array that we created manually in the previous assignment, and reflect on how much better this solution is
+
+let percentages2 = [];
+
+for (let i = 0; i < populations.length; i++) {
+    percentages2.push(percentageOfWorld1(populations[i]));
+}
+
+console.log(percentages2);
 
 ////////////////////////////////////
 //Looping backwards and Loops in loops
