@@ -690,3 +690,25 @@ console.log(percentages3);
 // 4.2. To calculate the average, divide the sum you calculated before by the length of the array (because that's the number of elements) 
 // 4.3. Call the function with the 'totals' array 
 // GOOD LUCK 😀
+
+bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+tips = [];
+let totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+    tips.push(calcTip(bills[i]));
+    totals.push(bills[i] + tips[i]);
+}
+
+console.log(tips);
+console.log(totals);
+
+function calcAvg(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+
+console.log(calcAvg(totals));
