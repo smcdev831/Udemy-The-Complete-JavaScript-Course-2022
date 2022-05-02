@@ -12,6 +12,21 @@
 // document.querySelector(".guess").value = 23;
 // console.log(document.querySelector(".guess").value);
 
+let x = function () {
+  console.log(23);
+};
+
+document.querySelector(".check").addEventListener("click", function () {
+  let guess = Number(document.querySelector(".guess").value);
+  console.log(guess);
+  console.log(typeof guess);
+
+  if (!guess) {
+    document.querySelector(".message").textContent = "No number!";
+  } else {
+  }
+});
+
 // Coding Challenge #1
 // Implement a game rest functionality, so that the player can make a new guess!
 // Your tasks:
