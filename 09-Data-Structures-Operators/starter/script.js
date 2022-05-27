@@ -12,6 +12,10 @@ const restaurant = {
   starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
   mainMenu: ["Pizza", "Pasta", "Risotto"],
 
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+
   openingHours: {
     thu: {
       open: 12,
@@ -27,6 +31,48 @@ const restaurant = {
     },
   },
 };
+
+let arr = [2, 3, 4];
+let a = arr[0];
+let b = arr[1];
+let c = arr[2];
+
+let [x, y, z] = arr;
+console.log(x, y, z);
+console.log(arr);
+
+let [first, second] = restaurant.categories;
+console.log(first, second);
+
+[first, , second] = restaurant.categories;
+console.log(first, second);
+
+let [main, , secondary] = restaurant.categories;
+console.log(main, secondary);
+
+let temp = main;
+main = secondary;
+secondary = temp;
+console.log(main, secondary);
+
+[main, secondary] = [secondary, main];
+console.log(main, secondary);
+
+let [starter, mainCourse] = restaurant.order(2, 0);
+console.log(starter, mainCourse);
+
+let nested = [2, 4, [5, 6]];
+// let [i, , j] = nested;
+// console.log(i, j);
+
+let [i, , [j, k]] = nested;
+console.log(i, j, k);
+
+let [p, q, r] = [8, 9];
+console.log(p, q, r);
+
+[p = 1, q = 1, r = 1] = [8, 9];
+console.log(p, q, r);
 
 ////////////////////////////////////
 // Coding Challenge #1
