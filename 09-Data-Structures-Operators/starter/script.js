@@ -357,7 +357,7 @@ const game = {
 // let gk = players1[0];
 // let fieldPlayers = [...players1];
 // let allPlayers = [...players1, ...players2];
-// let players1Final = [...fieldPlayers, "Thiago", "Coutinho", "Perisic"];
+// let players1Final = [...players1, "Thiago", "Coutinho", "Perisic"];
 
 //Class answers
 let [players1, players2] = game.players;
