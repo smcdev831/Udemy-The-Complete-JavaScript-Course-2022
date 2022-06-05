@@ -169,14 +169,14 @@ console.log(letters);
 console.log(...str);
 // console.log(`${...str} Schmedtmann`); --will not work as a template literal
 
-let ingredients = [
-  prompt("Let's make pasta! Ingredient 1?"),
-  prompt("Let's make pasta! Ingredient 2?"),
-  prompt("Let's make pasta! Ingredient 3?"),
-];
-console.log(ingredients);
+// let ingredients = [
+//   prompt("Let's make pasta! Ingredient 1?"),
+//   prompt("Let's make pasta! Ingredient 2?"),
+//   prompt("Let's make pasta! Ingredient 3?"),
+// ];
+// console.log(ingredients);
 
-restaurant.orderPasta(...ingredients);
+// restaurant.orderPasta(...ingredients);
 
 let newRestaurant = { foundedIn: 1998, ...restaurant, founder: "Guiseppe" };
 console.log(newRestaurant);
@@ -221,6 +221,38 @@ add(...x);
 
 restaurant.orderPizza("mushrooms", "onion", "olives", "spinach");
 restaurant.orderPizza("mushrooms");
+
+////////////////////////////////////
+//Short circuiting && and ||
+
+console.log("---- OR ----");
+console.log(3 || "Jonas"); //3
+console.log("" || "Jonas"); //"Jonas"
+console.log(true || 0); //true
+console.log(undefined || null); //null
+
+console.log(undefined || 0 || "" || "Hello" || 23 || null); //"Hello"
+
+restaurant.numGuests = 23;
+let guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+
+let guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+
+console.log("---- AND ----");
+console.log(0 && "Jonas"); //0
+console.log(7 && "Jonas"); //Jonas
+console.log("Hello" && 23 && null && "Jonas"); //null
+
+if (restaurant.orderPizza) {
+  restaurant.orderPizza("mushrooms", "spinach");
+}
+
+restaurant.orderPizza && restaurant.orderPizza("mushrooms", "spinach");
+
+////////////////////////////////////
+//The Nullish Coalescing Operator
 
 ////////////////////////////////////
 // Coding Challenge #1
