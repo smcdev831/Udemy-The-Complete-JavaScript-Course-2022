@@ -316,8 +316,11 @@ const game = {
   date: "Nov 9th, 2037",
   odds: {
     team1: 1.33,
-    x: 3.25,
+    draw: 3.25,
     team2: 6.5,
+  },
+  printGoals: function (...playerNames) {
+    console.log(...playerNames, playerNames.length);
   },
 };
 
@@ -327,7 +330,6 @@ let gk = players1[0];
 let fieldPlayers = [...players1];
 let allPlayers = [...players1, ...players2];
 let players1Final = [...fieldPlayers, "Thiago", "Coutinho", "Perisic"];
-console.log(players1Final);
 
 ////////////////////////////////////
 // Coding Challenge #2
