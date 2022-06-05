@@ -173,8 +173,16 @@ console.log(ingredients);
 
 restaurant.orderPasta(...ingredients);
 
-let newRestaurant = { ...restaurant, founder: "Guiseppe" };
+let newRestaurant = { foundedIn: 1998, ...restaurant, founder: "Guiseppe" };
 console.log(newRestaurant);
+
+let restaurantCopy = { ...restaurant };
+restaurantCopy.name = "Ristorante Roma";
+console.log(restaurantCopy.name);
+console.log(restaurant.name);
+
+////////////////////////////////////
+//Rest pattern and parameters
 
 ////////////////////////////////////
 // Coding Challenge #1
