@@ -262,6 +262,9 @@ let guestCorrect = restaurant.numGuests1 ?? 10;
 console.log(guestCorrect);
 
 ////////////////////////////////////
+//Logistical Assignment Operators
+
+////////////////////////////////////
 // Coding Challenge #1
 // We're building a football betting app (soccer for my American friends 😅)!
 // Suppose we get data from a web service about a certain game ('game' variable on next page). In this challenge we're gonna work with that data.
@@ -317,6 +320,14 @@ const game = {
     team2: 6.5,
   },
 };
+
+let players1 = game.players[0];
+let players2 = game.players[1];
+let gk = players1[0];
+let fieldPlayers = [...players1];
+let allPlayers = [...players1, ...players2];
+let players1Final = [...fieldPlayers, "Thiago", "Coutinho", "Perisic"];
+console.log(players1Final);
 
 ////////////////////////////////////
 // Coding Challenge #2
