@@ -39,6 +39,12 @@ const restaurant = {
       `Order recieved. ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}.`
     );
   },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious pasta with ${ing1}, ${ing2}, and ${ing3}.`
+    );
+  },
 };
 
 ////////////////////////////////////
@@ -157,6 +163,18 @@ let letters = [...str, " ", "S."];
 console.log(letters);
 console.log(...str);
 // console.log(`${...str} Schmedtmann`); --will not work as a template literal
+
+let ingredients = [
+  prompt("Let's make pasta! Ingredient 1?"),
+  prompt("Let's make pasta! Ingredient 2?"),
+  prompt("Let's make pasta! Ingredient 3?"),
+];
+console.log(ingredients);
+
+restaurant.orderPasta(...ingredients);
+
+let newRestaurant = { ...restaurant, founder: "Guiseppe" };
+console.log(newRestaurant);
 
 ////////////////////////////////////
 // Coding Challenge #1
