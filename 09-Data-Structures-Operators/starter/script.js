@@ -264,6 +264,34 @@ console.log(guestCorrect);
 ////////////////////////////////////
 //Logistical Assignment Operators
 
+let rest1 = {
+  name: "Capri",
+  numGuests: 0,
+};
+
+let rest2 = {
+  name: "La Piazza",
+  owner: "Giovanni Rossi",
+};
+
+rest1.numGuests = rest1.numGuests || 10;
+rest2.numGuests = rest2.numGuests || 10;
+
+rest1.numGuests ||= 10;
+rest2.numGuests ||= 10;
+
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+
+rest1.owner = rest1.owner && "<Anonymous>";
+rest2.owner = rest2.owner && "<Anonymous>";
+
+rest1.owner &&= "<Anonymous>";
+rest2.owner &&= "<Anonymous>";
+
+console.log(rest1);
+console.log(rest2);
+
 ////////////////////////////////////
 // Coding Challenge #1
 // We're building a football betting app (soccer for my American friends 😅)!
