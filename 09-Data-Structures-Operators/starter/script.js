@@ -1,6 +1,3 @@
-////////////////////////////////////
-//Destructuring Arrays
-
 // Data needed for a later exercise
 const flights =
   "_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30";
@@ -43,6 +40,9 @@ const restaurant = {
     );
   },
 };
+
+////////////////////////////////////
+//Destructuring Arrays
 
 let arr = [2, 3, 4];
 let a = arr[0];
@@ -131,6 +131,32 @@ restaurant.orderDelivery({
 
 ////////////////////////////////////
 //The Spread Operator
+
+arr = [7, 8, 9];
+let badNewArray = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArray);
+
+let goodNewArray = [1, 2, ...arr];
+console.log(goodNewArray);
+
+console.log(...goodNewArray);
+
+let newMenu = [...restaurant.mainMenu, "Gnocchi"];
+console.log(newMenu);
+
+let mainMenuCopy = [...restaurant.mainMenu];
+
+menu = [...restaurant.mainMenu].concat([...restaurant.starterMenu]);
+console.log(menu);
+
+menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(menu);
+
+let str = "Jonas";
+let letters = [...str, " ", "S."];
+console.log(letters);
+console.log(...str);
+// console.log(`${...str} Schmedtmann`); --will not work as a template literal
 
 ////////////////////////////////////
 // Coding Challenge #1
