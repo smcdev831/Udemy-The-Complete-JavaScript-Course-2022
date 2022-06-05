@@ -254,6 +254,13 @@ restaurant.orderPizza && restaurant.orderPizza("mushrooms", "spinach");
 ////////////////////////////////////
 //The Nullish Coalescing Operator
 
+restaurant.numGuests1 = 0;
+let guests = restaurant.numGuests1 || 10;
+console.log(guests);
+
+let guestCorrect = restaurant.numGuests1 ?? 10;
+console.log(guestCorrect);
+
 ////////////////////////////////////
 // Coding Challenge #1
 // We're building a football betting app (soccer for my American friends 😅)!
