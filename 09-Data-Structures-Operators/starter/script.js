@@ -448,6 +448,12 @@ const restaurant2 = {
 console.log(restaurant2);
 
 ////////////////////////////////////
+//Optional Chaining
+if (restaurant.openingHours.mon) {
+  console.log(restaurant.openingHours.mon.open);
+}
+
+////////////////////////////////////
 // Coding Challenge #2
 // Let's continue with our football betting app! Keep using the 'game' variable from before.
 // Your tasks:
