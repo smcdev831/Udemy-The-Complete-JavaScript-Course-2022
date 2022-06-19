@@ -484,6 +484,9 @@ if (users.length > 0) {
 }
 
 ////////////////////////////////////
+// Looping Objects: Object Keys, Values, and Entries
+
+////////////////////////////////////
 // Coding Challenge #2
 // Let's continue with our football betting app! Keep using the 'game' variable from before.
 // Your tasks:
