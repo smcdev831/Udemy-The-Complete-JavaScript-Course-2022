@@ -486,6 +486,33 @@ if (users.length > 0) {
 ////////////////////////////////////
 // Looping Objects: Object Keys, Values, and Entries
 
+let properties = Object.keys(openingHours);
+console.log(properties);
+
+console.log(`We are open on ${properties.length} days`);
+
+let openStr = `We are open on ${properties.length} days: `;
+
+for (const day of properties) {
+  openStr += `${day}, `;
+}
+
+console.log(openStr);
+
+let values = Object.values(openingHours);
+console.log(values);
+
+let entries = Object.entries(openingHours);
+console.log(entries);
+
+for (const x of entries) {
+  console.log(x);
+}
+
+for (const [day, { open, close }] of entries) {
+  console.log(`On ${day} we open at ${open} and close at ${close}.`);
+}
+
 ////////////////////////////////////
 // Coding Challenge #2
 // Let's continue with our football betting app! Keep using the 'game' variable from before.
