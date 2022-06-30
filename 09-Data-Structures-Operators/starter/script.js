@@ -598,6 +598,14 @@ for (const [i, name] of game.scored.entries()) {
   console.log(`Goal ${i + 1}: ${name}`);
 }
 
+for (const [name, odds] of Object.entries(game.odds)) {
+  let teamName = name === "x" ? "Draw" : `victory ${game[name]}`;
+  console.log(`Odds of ${teamName} ${odds}`);
+}
+
+let scorers = Object.entries(game.scored);
+console.log(scorers);
+
 ////////////////////////////////////
 // Coding Challenge #3
 // Let's continue with our football betting app! This time, we have a map called 'gameEvents' (see below) with a log of the events that happened during the game. The values are the events themselves, and the keys are the minutes in which each event happened (a football game has 90 minutes plus some extra time).
