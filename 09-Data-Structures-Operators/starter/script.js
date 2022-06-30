@@ -541,7 +541,7 @@ average /= odds.length;
 console.log(average);
 
 for (const [team, odds] of Object.entries(game.odds)) {
-  names = team === "x" ? "Draw" : `victory ${game[team]}`;
+  names = team === "x" ? "draw" : `victory ${game[team]}`;
   console.log(`Odds of ${names} ${odds}`);
 }
 
