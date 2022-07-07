@@ -596,6 +596,10 @@ console.log(new Set("jonasschmedtmann").size);
 ////////////////////////////////////
 // Maps: Fundamentals
 
+let rest = new Map();
+rest.set("name", "Classico Italiano");
+console.log(rest);
+
 ////////////////////////////////////
 // Maps: Iteration
 
