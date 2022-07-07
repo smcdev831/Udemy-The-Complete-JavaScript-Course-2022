@@ -554,6 +554,43 @@ console.log(scorers);
 ////////////////////////////////////
 // Sets
 
+let ordersSet = new Set([
+  "Pasta",
+  "Pizza",
+  "Pizza",
+  "Risotto",
+  "Pasta",
+  "Pizza",
+]);
+console.log(ordersSet);
+
+console.log(new Set("Jonas"));
+
+console.log(ordersSet.size);
+console.log(ordersSet.has("Pizza"));
+console.log(ordersSet.has("Bread"));
+
+ordersSet.add("Garlic Bread");
+ordersSet.add("Garlic Bread");
+
+console.log(ordersSet);
+
+ordersSet.delete("Risotto");
+console.log(ordersSet);
+
+// ordersSet.clear();
+// console.log(ordersSet);
+
+for (order of ordersSet) console.log(order);
+
+let staff = ["Waiter", "Chef", "Waiter", "Manager", "Chef", "Waiter"];
+
+let staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+console.log(
+  new Set(["Waiter", "Chef", "Waiter", "Manager", "Chef", "Waiter"]).size
+);
+
 ////////////////////////////////////
 // Coding Challenge #3
 // Let's continue with our football betting app! This time, we have a map called 'gameEvents' (see below) with a log of the events that happened during the game. The values are the events themselves, and the keys are the minutes in which each event happened (a football game has 90 minutes plus some extra time).
