@@ -594,6 +594,12 @@ console.log(
 console.log(new Set("jonasschmedtmann").size);
 
 ////////////////////////////////////
+// Maps: Fundamentals
+
+////////////////////////////////////
+// Maps: Iteration
+
+////////////////////////////////////
 // Coding Challenge #3
 // Let's continue with our football betting app! This time, we have a map called 'gameEvents' (see below) with a log of the events that happened during the game. The values are the events themselves, and the keys are the minutes in which each event happened (a football game has 90 minutes plus some extra time).
 // Your tasks:
