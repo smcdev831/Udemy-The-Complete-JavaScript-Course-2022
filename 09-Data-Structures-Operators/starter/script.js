@@ -633,6 +633,24 @@ console.log(rest.get(arr));
 ////////////////////////////////////
 // Maps: Iteration
 
+let question = new Map([
+  ["question", "What is the best programming language in the world?"],
+  [1, "C"],
+  [(2, "Java")],
+  [3, "Javascript"],
+  [("correct", 3)],
+  [true, "Correct"],
+  [(false, "Try again!")],
+]);
+
+console.log(question);
+
+//How to convert an object to a map
+console.log(Object.entries(openingHours));
+let hoursMap = new Map(Object.entries(openingHours));
+
+console.log(hoursMap);
+
 ////////////////////////////////////
 // Coding Challenge #3
 // Let's continue with our football betting app! This time, we have a map called 'gameEvents' (see below) with a log of the events that happened during the game. The values are the events themselves, and the keys are the minutes in which each event happened (a football game has 90 minutes plus some extra time).
