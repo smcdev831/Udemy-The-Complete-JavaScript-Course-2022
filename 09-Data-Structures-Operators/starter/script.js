@@ -699,6 +699,21 @@ const gameEvents = new Map([
   [92, "🔶 Yellow card"],
 ]);
 
+let events = Array.from(gameEvents.values());
+console.log(events);
+events.splice(4, 1);
+console.log(events);
+
+console.log("An event happened, on average, every 9 minutes");
+
+for ([key, value] of gameEvents) {
+  if (key <= 45) {
+    console.log(`[FIRST HALF] ${key}: ${value}`);
+  } else {
+    console.log(`[SECOND HALF] ${key}: ${value}`);
+  }
+}
+
 ////////////////////////////////////
 // Coding Challenge #4
 // Write a program that receives a list of variable names written in underscore_case and convert them to camelCase.
