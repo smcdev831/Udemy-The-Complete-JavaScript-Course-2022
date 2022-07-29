@@ -729,6 +729,56 @@ for ([min, eventt] of gameEvents) {
 }
 
 ////////////////////////////////////
+// Working with strings - Part 1
+
+let airline = "TAP Air Portugal";
+let plane = "A320";
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log("B737"[0]);
+
+console.log(airline.length);
+console.log("B737".length);
+
+console.log(airline.indexOf("r"));
+console.log(airline.lastIndexOf("r"));
+console.log(airline.indexOf("Portugal")); //case sensitive
+
+console.log(airline.slice(4));
+console.log(airline.slice(4, 7));
+
+console.log(airline.slice(0, airline.indexOf(" ")));
+console.log(airline.slice(airline.lastIndexOf(" ") + 1));
+console.log(airline.slice(-2));
+console.log(airline.slice(1, -1));
+
+let checkMiddleSeat = function (seat) {
+  //B and E are the middle seats
+  let s = seat.slice(-1);
+  if (s === "B" || s === "E") {
+    console.log("You got the middle seat!");
+  } else {
+    console.log("You got lucky!");
+  }
+};
+
+checkMiddleSeat("11B");
+checkMiddleSeat("23C");
+checkMiddleSeat("3E");
+
+console.log(new String("jonas"));
+console.log(typeof new String("jonas"));
+console.log(typeof new String("jonas").slice(1));
+
+////////////////////////////////////
+// Working with strings - Part 2
+
+////////////////////////////////////
+// Working with strings - Part 3
+
+////////////////////////////////////
 // Coding Challenge #4
 // Write a program that receives a list of variable names written in underscore_case and convert them to camelCase.
 // The input will come from a textarea inserted into the DOM (see code below to insert the elements), and conversion will happen when the button is pressed.
