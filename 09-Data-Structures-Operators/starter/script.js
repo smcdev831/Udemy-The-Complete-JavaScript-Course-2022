@@ -775,6 +775,26 @@ console.log(typeof new String("jonas").slice(1));
 ////////////////////////////////////
 // Working with strings - Part 2
 
+console.log(airline.toUpperCase());
+console.log(airline.toLowerCase());
+
+let passenger = "jOnAS";
+let passengerLower = passenger.toLowerCase();
+let passengerCorrect =
+  passengerLower[0].toLocaleUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
+
+let email = "hello@jonas.io";
+let loginEmail = "  Hello@Jonas.Io \n";
+// let lowerEmail = loginEmail.toLowerCase();
+// let trimmedEmail = lowerEmail.trim();
+let normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(email === normalizedEmail);
+
+let priceGB = "288,97£";
+let priceUS = priceGB.replace("£", "$").replace(",", ".");
+console.log(priceUS);
+
 ////////////////////////////////////
 // Working with strings - Part 3
 
