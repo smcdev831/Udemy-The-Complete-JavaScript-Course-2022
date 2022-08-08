@@ -795,6 +795,22 @@ let priceGB = "288,97£";
 let priceUS = priceGB.replace("£", "$").replace(",", ".");
 console.log(priceUS);
 
+let announcement = "All passengers come to boarding door 23. Boarding door 23!";
+
+console.log(announcement.replace("door", "gate"));
+
+console.log(announcement.replace(/door/g, "gate"));
+
+plane = "Airbus A320neo";
+console.log(plane.includes("A320"));
+console.log(plane.includes("Boeing"));
+console.log(plane.startsWith("Air"));
+console.log(plane.startsWith("Aib"));
+
+if (plane.startsWith("Airbus") && plane.endsWith("neo")) {
+  console.log("Part of the NEW Airbus family");
+}
+
 ////////////////////////////////////
 // Working with strings - Part 3
 
