@@ -827,6 +827,27 @@ checkBaggage("Got some snacks and a gun for protection");
 ////////////////////////////////////
 // Working with strings - Part 3
 
+console.log("a+very+nice+string".split("+"));
+console.log("Jonas Scmedtmann".split(" "));
+
+let [firstName, lastName] = "Jonas Scmedtmann".split(" ");
+
+newName = ["Mr.", firstName, lastName.toUpperCase()].join(" ");
+console.log(newName);
+
+let capitalizeName = function (name) {
+  let names = name.split(" ");
+  let namesUpper = [];
+
+  for (const n of names) {
+    namesUpper.push(n[0].toUpperCase() + n.slice(1));
+  }
+  console.log(namesUpper.join(" "));
+};
+
+capitalizeName("jessica ann smith davis");
+capitalizeName("jonas schmedtmann");
+
 ////////////////////////////////////
 // Coding Challenge #4
 // Write a program that receives a list of variable names written in underscore_case and convert them to camelCase.
