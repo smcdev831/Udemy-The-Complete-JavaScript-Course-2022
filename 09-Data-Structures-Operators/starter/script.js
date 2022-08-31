@@ -840,13 +840,28 @@ let capitalizeName = function (name) {
   let namesUpper = [];
 
   for (const n of names) {
-    namesUpper.push(n[0].toUpperCase() + n.slice(1));
+    //namesUpper.push(n[0].toUpperCase() + n.slice(1));
+    namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
   }
   console.log(namesUpper.join(" "));
 };
 
 capitalizeName("jessica ann smith davis");
 capitalizeName("jonas schmedtmann");
+
+let message = "Go to gate 23!";
+console.log(message.padStart(25, "+").padEnd(30, "+"));
+console.log("Jonas".padStart(20, "+").padEnd(30, "+"));
+
+const maskCreditCard = function (number) {
+  let str = number + "";
+  let last = str.slice(-4);
+  console.log(last.padStart(str.length, "*"));
+};
+
+maskCreditCard(64637836);
+maskCreditCard(43378463864647384);
+maskCreditCard("334859493847755774747");
 
 ////////////////////////////////////
 // Coding Challenge #4
