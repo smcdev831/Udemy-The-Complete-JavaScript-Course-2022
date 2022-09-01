@@ -863,6 +863,18 @@ maskCreditCard(64637836);
 maskCreditCard(43378463864647384);
 maskCreditCard("334859493847755774747");
 
+let message2 = "Bad weather... All Departures Delayed ";
+
+console.log(message2.repeat(5));
+
+let planesInLine = function (n) {
+  console.log(`There are ${n} planes in line ${"✈".repeat(n)}`);
+};
+
+planesInLine(5);
+planesInLine(3);
+planesInLine(12);
+
 ////////////////////////////////////
 // Coding Challenge #4
 // Write a program that receives a list of variable names written in underscore_case and convert them to camelCase.
