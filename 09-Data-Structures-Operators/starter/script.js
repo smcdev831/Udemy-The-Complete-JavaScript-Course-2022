@@ -931,5 +931,9 @@ flights =
 //            Departure from FAO to LIS (12h30)
 
 for (const flight of flights.split("+")) {
-  console.log(flight);
+  let [type, from, to, time] = flight.split(";");
+  let output = `${type} ${from.slice(0, 3).toUpperCase()} to ${to
+    .slice(0, 3)
+    .toUpperCase()} "("${time.replace(":", "h")")"}`;
+  console.log(output);
 }
