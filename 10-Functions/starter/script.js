@@ -1,6 +1,27 @@
 "use strict";
 
 ////////////////////////////////////
+// Default Parameters
+
+////////////////////////////////////
+// How Passing Arguments Works: Value vs Reference
+
+////////////////////////////////////
+// First-Class and Higher-Order Functions
+
+////////////////////////////////////
+// Functions Accepting Callback Functions
+
+////////////////////////////////////
+// Functions Returning Functions
+
+////////////////////////////////////
+// The Call and Apply Methods
+
+////////////////////////////////////
+// The Bind Method
+
+////////////////////////////////////
 // Coding Challenge #1
 // Let's build a simple poll app!
 // A poll has a question, an array of options from which people can choose, and an array with the number of replies for each option. This data is stored in the starter 'poll' object below.
