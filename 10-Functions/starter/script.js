@@ -28,6 +28,34 @@ createBooking("LH123", undefined, 1000);
 ////////////////////////////////////
 // How Passing Arguments Works: Value vs Reference
 
+let flight = "LH234";
+let jonas = {
+  name: "Jonas Schmedtmann",
+  passport: 24739479284,
+};
+
+let checkIn = function (flightNum, passenger) {
+  flightNum = "LH999";
+  passenger.name = "Mr. " + passenger.name;
+
+  if (passenger.passport === 24739479284) {
+    alert("Checked In");
+  } else {
+    alert("Wrong Passport!");
+  }
+};
+
+checkIn(flight, jonas);
+console.log(flight);
+console.log(jonas);
+
+const newPassport = function (person) {
+  person.passport = Math.random() * 100000000000;
+};
+
+newPassport(jonas);
+checkIn(flight, jonas);
+
 ////////////////////////////////////
 // First-Class and Higher-Order Functions
 
