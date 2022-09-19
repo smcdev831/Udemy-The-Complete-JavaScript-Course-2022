@@ -935,8 +935,8 @@ for (const flight of flights.split("+")) {
   let output = `${type.startsWith("_Delayed") ? "🔴" : ""} ${type.replaceAll(
     "_",
     " "
-  )} ${from.slice(0, 3).toUpperCase()} to ${to
+  )} from ${from.slice(0, 3).toUpperCase()} to ${to
     .slice(0, 3)
-    .toUpperCase()} ${time.replace(":", "h")}`;
+    .toUpperCase()} ${time.replace(":", "h")}`.padStart(43);
   console.log(output);
 }
