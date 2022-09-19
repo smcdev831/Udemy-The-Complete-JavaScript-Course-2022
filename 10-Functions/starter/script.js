@@ -55,6 +55,12 @@ const poll = {
 };
 
 ////////////////////////////////////
+// Immediately Invoked Functions Expressions (IIFE)
+
+////////////////////////////////////
+// Closures
+
+////////////////////////////////////
 // Coding Challenge #2
 // This is more of a thinking challenge than a coding challenge 🤓
 // Your tasks:
