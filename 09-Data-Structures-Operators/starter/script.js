@@ -940,3 +940,19 @@ for (const flight of flights.split("+")) {
     .toUpperCase()} ${time.replace(":", "h")}`.padStart(43);
   console.log(output);
 }
+
+//refactoring
+
+const getCode = (str) => str.slice(0, 3).toUpperCase();
+
+for (const flight of flights.split("+")) {
+  let [type, from, to, time] = flight.split(";");
+  let output = `${type.startsWith("_Delayed") ? "🔴" : ""} ${type.replaceAll(
+    "_",
+    " "
+  )} from ${getCode(from)} to ${getCode(to)} ${time.replace(
+    ":",
+    "h"
+  )}`.padStart(43);
+  console.log(output);
+}
