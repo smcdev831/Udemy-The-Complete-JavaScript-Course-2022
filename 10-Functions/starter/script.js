@@ -88,6 +88,28 @@ document.body.addEventListener("click", high5);
 ////////////////////////////////////
 // Functions Returning Functions
 
+let greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  };
+};
+
+let greeterHey = greet("Hey");
+greeterHey("Jonas");
+greeterHey("Steven");
+
+greet("Hello")("Jonas");
+
+function greets(greeting, name) {
+  console.log(`${greeting} ${name}`);
+}
+
+greets("Hello", "Maria");
+
+let greetArr = (greeting, name) => console.log(`${greeting} ${name}`);
+
+greetArr("Howdy", "John");
+
 ////////////////////////////////////
 // The Call and Apply Methods
 
