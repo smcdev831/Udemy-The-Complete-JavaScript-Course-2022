@@ -235,15 +235,15 @@ const poll = {
   answers: new Array(4).fill(0),
 };
 
+function pollPrompt() {
+  let prompt = prompt(
+    "What is your favourite programming language? 0: JavaScript 1: Python 2: Rust 3: C++"
+  );
+  alert(prompt);
+}
+
 poll.registerNewAnswer = function () {
-  document
-    .querySelector(".poll")
-    .addEventListener(
-      "click",
-      prompt(
-        "What is your favourite programming language? 0: JavaScript 1: Python 2: Rust 3: C++"
-      )
-    );
+  document.querySelector(".poll").addEventListener("click", pollPrompt);
 };
 
 ////////////////////////////////////
