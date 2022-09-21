@@ -119,9 +119,9 @@ let lufthansa = {
   bookings: [],
   book(flightNum, name) {
     console.log(
-      `${name} booked a seat on ${this.airline} flight ${this.iataCode} ${flightNum}`
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
     );
-    this.bookings.push({ flight: `${this.iataCode} ${flightNum}`, name });
+    this.bookings.push({ flight: `${this.iataCode}${flightNum}`, name });
   },
 };
 
@@ -161,6 +161,47 @@ book.call(swiss, ...flightData2);
 
 ////////////////////////////////////
 // The Bind Method
+
+let bookEW = book.bind(eurowings);
+let bookLU = book.bind(lufthansa);
+let bookLX = book.bind(swiss);
+bookEW(23, "Steven Williams");
+bookLU(23, "Steven Williams");
+bookLX(23, "Steven Williams");
+
+let bookEW23 = book.bind(eurowings, 23);
+bookEW23("Jonas Schmedtmann");
+bookEW23("Martha Cooper");
+
+lufthansa.planes = 300;
+lufthansa.buyPlane = function () {
+  console.log(this);
+  this.planes++;
+  console.log(this.planes);
+};
+
+document
+  .querySelector(".buy")
+  .addEventListener("click", lufthansa.buyPlane.bind(lufthansa));
+
+let addTax = (rate, value) => value + value * rate;
+console.log(addTax(0.1, 200));
+
+let addVAT = addTax.bind(null, 0.23);
+
+console.log(addVAT(100));
+console.log(addVAT(23));
+
+let addTaxRate = function (rate) {
+  return function (value) {
+    return value + value * rate;
+  };
+};
+
+let addVAT2 = addTaxRate(0.23);
+
+console.log(addVAT2(100));
+console.log(addVAT2(23));
 
 ////////////////////////////////////
 // Coding Challenge #1
