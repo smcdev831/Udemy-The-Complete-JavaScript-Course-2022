@@ -237,13 +237,32 @@ const poll = {
 
 poll.registerNewAnswer = function () {};
 
-poll.registerNewAnswer = function () {};
-
 document.querySelector(".poll").addEventListener("click", function () {
   let promptt = prompt(
     "What is your favourite programming language? 0: JavaScript 1: Python 2: Rust 3: C++"
   );
   alert(promptt);
+
+  if (promptt !== 0 && promptt !== 1 && promptt !== 2 && promptt !== 3) {
+    promptt = prompt(
+      "Please select one of the following: 0: JavaScript 1: Python 2: Rust 3: C++"
+    );
+  }
+
+  switch (promptt) {
+    case 0:
+      options[0] + 1;
+      break;
+    case 1:
+      options[1] + 1;
+      break;
+    case 2:
+      options[2] + 1;
+      break;
+    case 3:
+      options[3] + 1;
+      break;
+  }
 });
 
 ////////////////////////////////////
