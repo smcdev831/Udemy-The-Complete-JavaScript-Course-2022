@@ -263,6 +263,7 @@ document.querySelector(".poll").addEventListener("click", function () {
       options[3] + 1;
       break;
   }
+  console.log(options);
 });
 
 ////////////////////////////////////
