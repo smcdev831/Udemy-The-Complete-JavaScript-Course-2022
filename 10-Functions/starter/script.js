@@ -235,16 +235,16 @@ const poll = {
   answers: new Array(4).fill(0),
 };
 
-function pollPrompt() {
-  let prompt = prompt(
+poll.registerNewAnswer = function () {};
+
+poll.registerNewAnswer = function () {};
+
+document.querySelector(".poll").addEventListener("click", function () {
+  let promptt = prompt(
     "What is your favourite programming language? 0: JavaScript 1: Python 2: Rust 3: C++"
   );
-  alert(prompt);
-}
-
-poll.registerNewAnswer = function () {
-  document.querySelector(".poll").addEventListener("click", pollPrompt);
-};
+  alert(promptt);
+});
 
 ////////////////////////////////////
 // Immediately Invoked Functions Expressions (IIFE)
