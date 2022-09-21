@@ -113,6 +113,52 @@ greetArr("Howdy", "John");
 ////////////////////////////////////
 // The Call and Apply Methods
 
+let lufthansa = {
+  airline: "Lufthansa",
+  iataCode: "LH",
+  bookings: [],
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode} ${flightNum}`
+    );
+    this.bookings.push({ flight: `${this.iataCode} ${flightNum}`, name });
+  },
+};
+
+lufthansa.book(239, "Jonas Schmedtmann");
+lufthansa.book(635, "John Smith");
+console.log(lufthansa);
+
+let eurowings = {
+  airline: "Eurowings",
+  iataCode: "EW",
+  bookings: [],
+};
+
+let book = lufthansa.book;
+
+book.call(eurowings, 23, "Sarah Williams");
+console.log(eurowings);
+
+book.call(lufthansa, 239, "Mary Cooper");
+console.log(lufthansa);
+
+let swiss = {
+  airline: "Swiss Air Lines",
+  iataCode: "LX",
+  bookings: [],
+};
+
+book.call(swiss, 583, "Mary Cooper");
+console.log(swiss);
+
+let flightData = [583, "George Cooper"];
+book.apply(swiss, flightData);
+console.log(swiss);
+
+let flightData2 = [583, "Peter Cooper"];
+book.call(swiss, ...flightData2);
+
 ////////////////////////////////////
 // The Bind Method
 
