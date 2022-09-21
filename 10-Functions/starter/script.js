@@ -233,38 +233,51 @@ const poll = {
   options: ["0: JavaScript", "1: Python", "2: Rust", "3: C++"],
   // This generates [0, 0, 0, 0]. More in the next section!
   answers: new Array(4).fill(0),
+  registerNewAnswer() {
+    let answer = Number(
+      prompt(
+        `${this.question}\n${this.options.join("\n")}\n(Write option number)`
+      )
+    );
+    console.log(answer);
+
+    typeof answer === "number" && answer < this.answers.length;
+  },
 };
 
-poll.registerNewAnswer = function () {};
+poll.registerNewAnswer();
 
-document.querySelector(".poll").addEventListener("click", function () {
-  let promptt = prompt(
-    "What is your favourite programming language? 0: JavaScript 1: Python 2: Rust 3: C++"
-  );
-  alert(promptt);
+//My code
+// poll.registerNewAnswer = function () {};
 
-  if (promptt !== 0 && promptt !== 1 && promptt !== 2 && promptt !== 3) {
-    promptt = prompt(
-      "Please select one of the following: 0: JavaScript 1: Python 2: Rust 3: C++"
-    );
-  }
+// document.querySelector(".poll").addEventListener("click", function () {
+//   let promptt = prompt(
+//     "What is your favourite programming language? 0: JavaScript 1: Python 2: Rust 3: C++"
+//   );
+//   alert(promptt);
 
-  switch (promptt) {
-    case 0:
-      options[0] + 1;
-      break;
-    case 1:
-      options[1] + 1;
-      break;
-    case 2:
-      options[2] + 1;
-      break;
-    case 3:
-      options[3] + 1;
-      break;
-  }
-  console.log(options);
-});
+//   if (promptt !== 0 && promptt !== 1 && promptt !== 2 && promptt !== 3) {
+//     promptt = prompt(
+//       "Please select one of the following: 0: JavaScript 1: Python 2: Rust 3: C++"
+//     );
+//   }
+
+//   switch (promptt) {
+//     case 0:
+//       poll.options[0] + 1;
+//       break;
+//     case 1:
+//       poll.options[1] + 1;
+//       break;
+//     case 2:
+//       poll.options[2] + 1;
+//       break;
+//     case 3:
+//       poll.options[3] + 1;
+//       break;
+//   }
+//   console.log(poll.options);
+// });
 
 ////////////////////////////////////
 // Immediately Invoked Functions Expressions (IIFE)
@@ -279,9 +292,9 @@ document.querySelector(".poll").addEventListener("click", function () {
 // 1. Take the IIFE below and at the end of the function, attach an event listener that changes the color of the selected h1 element ('header') to blue, each time the body element is clicked. Do not select the h1 element again!
 // 2. And now explain to yourself (or someone around you) why this worked! Take all the time you need. Think about when exactly the callback function is executed, and what that means for the variables involved in this example.
 
-(function () {
-  const header = document.querySelector("h1");
-  header.style.color = "red";
-})();
+// (function () {
+//   const header = document.querySelector("h1");
+//   header.style.color = "red";
+// })();
 
-// GOOD LUCK 😀
+// // GOOD LUCK 😀
