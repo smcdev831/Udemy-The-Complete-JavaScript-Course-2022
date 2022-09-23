@@ -301,6 +301,15 @@ poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] }, "string");
 ////////////////////////////////////
 // Immediately Invoked Functions Expressions (IIFE)
 
+(function () {
+  console.log("This will never run again");
+  let isPrivate = 23;
+})();
+
+// console.log(isPrivate);
+
+(() => console.log("This will ALSO never run again"))();
+
 ////////////////////////////////////
 // Closures
 
