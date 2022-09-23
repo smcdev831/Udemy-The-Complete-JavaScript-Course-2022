@@ -313,6 +313,21 @@ poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] }, "string");
 ////////////////////////////////////
 // Closures
 
+let secureBooking = function () {
+  let passengerCount = 0;
+
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
+};
+
+let booker = secureBooking();
+
+booker();
+booker();
+booker();
+
 ////////////////////////////////////
 // Coding Challenge #2
 // This is more of a thinking challenge than a coding challenge 🤓
@@ -323,6 +338,7 @@ poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] }, "string");
 (function () {
   const header = document.querySelector("h1");
   header.style.color = "red";
+  header.style.backgroundColor = "blue";
 })();
 
 // // GOOD LUCK 😀
