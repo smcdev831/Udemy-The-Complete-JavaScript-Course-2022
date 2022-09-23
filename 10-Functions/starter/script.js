@@ -328,6 +328,42 @@ booker();
 booker();
 booker();
 
+console.dir(booker);
+
+let f;
+
+let g = function () {
+  let a = 23;
+  f = function () {
+    console.log(a * 2);
+  };
+};
+
+let h = function () {
+  let b = 777;
+  f = function () {
+    console.log(b * 2);
+  };
+};
+
+g();
+f();
+h();
+f();
+
+let boardPassengers = function (n, wait) {
+  let perGroup = n / 3;
+
+  setTimeout(function () {
+    console.log(`We are now boarding all ${n} passengers`);
+    console.log(`There are 3 groups, each with ${perGroup} passengers`);
+  }, 1000);
+
+  console.log(`Will start boarding in ${wait} seconds`);
+};
+
+boardPassengers(180, 3);
+
 ////////////////////////////////////
 // Coding Challenge #2
 // This is more of a thinking challenge than a coding challenge 🤓
