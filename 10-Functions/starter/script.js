@@ -338,7 +338,7 @@ booker();
 (function () {
   const header = document.querySelector("h1");
   header.style.color = "red";
-  header.style.backgroundColor = "blue";
+  // header.style.backgroundColor = "blue";
 })();
 
 // // GOOD LUCK 😀
