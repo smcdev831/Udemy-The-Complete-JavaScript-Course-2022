@@ -119,19 +119,30 @@ console.log("jonas".at(-1));
 /////////////////////////////////////////////////
 // Looping Arrays: For each
 
+console.log("---- For Loop ----");
 for (let movement of movements) {
   if (movement > 0) {
-    console.log(`You deposited ${movement}`);
+    console.log(`You deposited $${movement}`);
   } else {
-    console.log(`You withdrew ${Math.abs(movement)}`);
+    console.log(`You withdrew $${Math.abs(movement)}`);
   }
 }
 
+console.log("---- Constant For Of Loop ----");
+for (const [i, movement] of movements.entries()) {
+  if (movement > 0) {
+    console.log(`Movement ${i + 1}: You deposited $${movement}`);
+  } else {
+    console.log(`Movement ${i + 1}: You withdrew $${Math.abs(movement)}`);
+  }
+}
+
+console.log("---- For Each Loop ----");
 movements.forEach((movement) => {
   if (movement > 0) {
-    console.log(`You deposited ${movement}`);
+    console.log(`You deposited $${movement}`);
   } else {
-    console.log(`You withdrew ${Math.abs(movement)}`);
+    console.log(`You withdrew $${Math.abs(movement)}`);
   }
 });
 
