@@ -158,6 +158,17 @@ movements.forEach((movement, index, array) => {
 /////////////////////////////////////////////////
 // forEach with Maps and Sets
 
+currencies.forEach((currentValue, key, map) => {
+  console.log(`${key} ${currentValue}`);
+});
+
+let currenciesUnique = new Set(["USD", "GBP", "USD", "EUR", "EUR"]);
+console.log(currenciesUnique);
+
+currenciesUnique.forEach((value, key, map) => {
+  console.log(`${key}: ${value}`);
+});
+
 /////////////////////////////////////////////////
 // PROJECT: Bankist App
 
