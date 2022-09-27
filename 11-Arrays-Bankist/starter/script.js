@@ -146,6 +146,15 @@ movements.forEach((movement) => {
   }
 });
 
+console.log("---- For Each+ Loop ----");
+movements.forEach((movement, index, array) => {
+  if (movement > 0) {
+    console.log(`Movement ${index + 1}: You deposited $${movement}`);
+  } else {
+    console.log(`Movement ${index + 1}: You withdrew $${Math.abs(movement)}`);
+  }
+});
+
 /////////////////////////////////////////////////
 // forEach with Maps and Sets
 
