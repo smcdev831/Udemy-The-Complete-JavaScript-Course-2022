@@ -175,6 +175,25 @@ currenciesUnique.forEach((value, key, map) => {
 /////////////////////////////////////////////////
 // Creating DOM Elements
 
+let displayMovements = function (movements) {
+  containerMovements.innerHTML = "";
+
+  movements.forEach((mov, i) => {
+    let type = mov > 0 ? "deposit" : "withdrawal";
+    let html = `
+    <div class="movements__row">
+      <div class="movements__type movements__type--${type}">${
+      i + 1
+    } ${type}</div>
+      <div class="movements__value">${mov}</div>
+    </div>`;
+
+    containerMovements.insertAdjacentHTML("afterbegin", html);
+  });
+};
+
+displayMovements(account1.movements);
+
 /////////////////////////////////////////////////
 // Coding Challenge #1
 // Julia and Kate are doing a study on dogs. So each of them asked 5 dog owners about their dog's age, and stored the data into an array (one array for each). For now, they are just interested in knowing whether a dog is an adult or a puppy. A dog is an adult if it is at least 3 years old, and it's a puppy if it's less than 3 years old.
