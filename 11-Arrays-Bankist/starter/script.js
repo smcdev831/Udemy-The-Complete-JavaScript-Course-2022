@@ -209,6 +209,21 @@ displayMovements(account1.movements);
 // Hints: Use tools from all lectures in this section so far 😉
 // GOOD LUCK 😀
 
+function checkDogs(dogsJulia, dogsKate) {
+  let actualDogs = dogsKate.slice(0, -2);
+  let totalDogs = dogsJulia.concat(actualDogs);
+  totalDogs.forEach((age, index) => {
+    console.log(
+      age >= 3
+        ? `"Dog number ${index + 1} is an adult, and is ${age} years old"`
+        : `Dog number ${index + 1} is still a puppy 🐶`
+    );
+  });
+}
+
+checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
+checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
+
 /////////////////////////////////////////////////
 // Data Transformations: map, filter, reduce
 
