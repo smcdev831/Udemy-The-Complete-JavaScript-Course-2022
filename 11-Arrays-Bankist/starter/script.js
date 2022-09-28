@@ -244,6 +244,14 @@ let movementsUSDfor = [];
 for (let mov of movements) movementsUSDfor.push(mov * eurToUsd);
 console.log(movementsUSDfor);
 
+let movementsDescriptions = movements.map(
+  (mov, i) =>
+    `Movement ${i + 1}: You ${mov > 0 ? "deposited" : "withdrew"} $${Math.abs(
+      mov
+    )}`
+);
+console.log(movementsDescriptions);
+
 /////////////////////////////////////////////////
 // Computing Usernames
 
