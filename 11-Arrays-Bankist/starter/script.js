@@ -273,17 +273,14 @@ let createUsernames = (user) => {
 };
 console.log(createUsernames("Steven Thomas Williams"));
 
-createUsernames = (accounts) => {
-  accounts.forEach((account) => {
-    account.username = account.owner
-      .toLowerCase()
-      .split(" ")
-      .map((name) => name[0])
-      .join("");
-    return username;
-  });
-};
-createUsernames(accounts);
+createUsernames = accounts.forEach((account) => {
+  account.username = account.owner
+    .toLowerCase()
+    .split(" ")
+    .map((name) => name[0])
+    .join("");
+});
+console.log(accounts);
 
 /////////////////////////////////////////////////
 // The filter Method
