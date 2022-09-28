@@ -210,8 +210,8 @@ displayMovements(account1.movements);
 // GOOD LUCK 😀
 
 function checkDogs(dogsJulia, dogsKate) {
-  let actualDogs = dogsKate.slice(0, -2);
-  let totalDogs = dogsJulia.concat(actualDogs);
+  let actualDogs = dogsJulia.slice(1, -2);
+  let totalDogs = dogsKate.concat(actualDogs);
   totalDogs.forEach((age, index) => {
     console.log(
       age >= 3
