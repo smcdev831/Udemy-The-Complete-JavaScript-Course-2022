@@ -230,6 +230,20 @@ checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
 /////////////////////////////////////////////////
 // The map Method
 
+let eurToUsd = 1.1;
+
+let movementsUSD = movements.map((movement) => {
+  return movement * eurToUsd;
+});
+//refactoring
+// let movementsUSD = movements.map((movement) => movement * eurToUsd);
+console.log(movements);
+console.log(movementsUSD);
+
+let movementsUSDfor = [];
+for (let mov of movements) movementsUSDfor.push(mov * eurToUsd);
+console.log(movementsUSDfor);
+
 /////////////////////////////////////////////////
 // Computing Usernames
 
