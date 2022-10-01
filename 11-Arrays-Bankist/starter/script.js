@@ -327,6 +327,9 @@ let calcDisplayBalance = function (movements) {
 };
 calcDisplayBalance(account1.movements);
 
+let max = movements.reduce((acc, mov) => (acc > mov ? acc : mov));
+console.log(max);
+
 /////////////////////////////////////////////////
 // Coding Challenge #2
 // Let's go back to Julia and Kate's study about dogs. This time, they want to convert dog ages to human ages and calculate the average age of the dogs in their study.
@@ -340,6 +343,23 @@ calcDisplayBalance(account1.movements);
 // § Data 1: [5, 2, 4, 1, 15, 8, 3]
 // § Data 2: [16, 6, 10, 5, 6, 1, 4]
 // GOOD LUCK 😀
+
+let calcAverageHumanAge = function (ages) {
+  let humanAge = [];
+  for (let i = 0; i < ages.length; i++) {
+    if (ages[i] <= 2) {
+      humanAge.push(ages[i] * 2);
+    } else {
+      humanAge.push(16 + ages[i] * 4);
+    }
+  }
+  let over18 = humanAge.filter((age) => age >= 18);
+  let averageBase = over18.reduce((acc, cur) => acc + cur);
+  let average = averageBase / over18.length;
+  console.log(average);
+};
+calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
+calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
 
 /////////////////////////////////////////////////
 // The Magic of Chaining Methods
