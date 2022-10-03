@@ -323,7 +323,7 @@ console.log(balance);
 
 let calcDisplayBalance = function (movements) {
   let balance = movements.reduce((acc, mov) => acc + mov, 0);
-  labelBalance.textContent = `${balance} EUR`;
+  labelBalance.textContent = `${balance} €`;
 };
 calcDisplayBalance(account1.movements);
 
@@ -383,13 +383,24 @@ let totalDepositsUSD = movements
 console.log(totalDepositsUSD);
 
 totalDepositsUSD = movements
-  .filter((mov) => mov < 0)
+  .filter((mov) => mov > 0)
   .map((mov, i, arr) => {
     console.log(arr);
     return mov * eurToUsd;
   })
   .reduce((acc, mov) => acc + mov, 0);
 console.log(totalDepositsUSD);
+
+let calcDisplaySummary = function (movements) {
+  let incomes = movements
+    .filter((mov) => mov > 0)
+    .reduce((acc, mov) => acc + mov, 0);
+  labelSumIn.textContent = `${incomes} €`;
+  let withdrawals = movements
+    .filter((mov) => mov < 0)
+    .reduce((acc, mov) => acc + mov, 0);
+  labelSumOut.textContent = `${withdrawals} €`;
+};
 
 /////////////////////////////////////////////////
 // Coding Challenge #3
