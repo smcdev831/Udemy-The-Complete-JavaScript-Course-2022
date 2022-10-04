@@ -434,6 +434,10 @@ let firstWithdrawl = movements.find((mov) => mov < 0);
 console.log(movements);
 console.log(firstWithdrawl);
 
+let account = accounts.find(acc => acc.owner === 'Jessica Davis')
+console.log(account);
+
+
 /////////////////////////////////////////////////
 // Implementing Login
 
