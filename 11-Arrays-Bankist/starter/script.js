@@ -437,7 +437,6 @@ console.log(firstWithdrawl);
 let account = accounts.find(acc => acc.owner === 'Jessica Davis')
 console.log(account);
 
-
 /////////////////////////////////////////////////
 // Implementing Login
 
