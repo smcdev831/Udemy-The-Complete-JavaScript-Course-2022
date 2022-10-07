@@ -455,6 +455,10 @@ btnLogin.addEventListener("click", function (event) {
       currentAccount.owner.split(" ")[0]
     }`;
     containerApp.style.opacity = 100;
+
+    displayMovements(currentAccount.movements);
+    calcDisplayBalance(currentAccount.movements);
+    calcDisplaySummary(currentAccount.movements);
   }
 });
 
