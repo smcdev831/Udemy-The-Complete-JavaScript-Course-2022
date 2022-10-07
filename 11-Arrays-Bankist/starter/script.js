@@ -468,6 +468,11 @@ btnLogin.addEventListener("click", function (event) {
 /////////////////////////////////////////////////
 // Implementing Transfers
 
+btnTransfer.addEventListener("click", function (e) {
+  e.preventDefault();
+  let amount = Number(inputTransferAmount.value);
+});
+
 /////////////////////////////////////////////////
 // The findIndex Method
 
