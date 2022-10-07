@@ -440,6 +440,11 @@ console.log(account);
 /////////////////////////////////////////////////
 // Implementing Login
 
+btnLogin.addEventListener("click", function (event) {
+  event.preventDefault();
+  accounts.find((acc) => acc.owner === inputLoginUsername.value);
+});
+
 /////////////////////////////////////////////////
 // Implementing Transfers
 
