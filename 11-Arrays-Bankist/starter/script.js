@@ -321,11 +321,11 @@ console.log(balance2);
 balance = movements.reduce((acc, cur) => acc + cur, 0);
 console.log(balance);
 
-let calcDisplayBalance = function (acc) {
-  acc.balance = acc.movements.reduce((acc, mov) => acc + mov, 0);
+let calcDisplayBalance = function (movements) {
+  let balance = movements.reduce((acc, mov) => acc + mov, 0);
   labelBalance.textContent = `${balance} €`;
 };
-// calcDisplayBalance(currentAccount);
+calcDisplayBalance(account1.movements);
 
 let max = movements.reduce((acc, mov) => (acc > mov ? acc : mov));
 console.log(max);
@@ -408,7 +408,7 @@ let calcDisplaySummary = function (acc) {
   labelSumInterest.textContent = `${interest}€`;
 };
 
-// calcDisplaySummary(acc.movements);
+calcDisplaySummary(acc);
 
 /////////////////////////////////////////////////
 // Coding Challenge #3
@@ -461,29 +461,12 @@ btnLogin.addEventListener("click", function (event) {
 
     displayMovements(currentAccount.movements);
     calcDisplayBalance(currentAccount.movements);
-    calcDisplaySummary(currentAccount);
+    calcDisplaySummary(currentAccount.movements);
   }
 });
 
 /////////////////////////////////////////////////
 // Implementing Transfers
-
-btnTransfer.addEventListener("click", function (e) {
-  e.preventDefault();
-  let amount = Number(inputTransferAmount.value);
-  let receiverAcc = accounts.find(
-    (acc) => acc.username === inputTransferTo.value
-  );
-  console.log(amount, receiverAcc);
-
-  if (
-    amount > 0 &&
-    currentAccount.balance >= amount &&
-    receiverAcc?.username !== currentAccount.username
-  ) {
-    console.log("Transfer Valid");
-  }
-});
 
 /////////////////////////////////////////////////
 // The findIndex Method
