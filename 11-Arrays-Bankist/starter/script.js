@@ -391,24 +391,24 @@ totalDepositsUSD = movements
   .reduce((acc, mov) => acc + mov, 0);
 console.log(totalDepositsUSD);
 
-let calcDisplaySummary = function (movements) {
-  let incomes = movements
+let calcDisplaySummary = function (acc) {
+  const incomes = acc.movements
     .filter((mov) => mov > 0)
     .reduce((acc, mov) => acc + mov, 0);
   labelSumIn.textContent = `${incomes}€`;
-  let withdrawals = movements
+  let withdrawals = account.movements
     .filter((mov) => mov < 0)
     .reduce((acc, mov) => acc + mov, 0);
   labelSumOut.textContent = `${Math.abs(withdrawals)}€`;
-  let interest = movements
+  let interest = acc.movements
     .filter((mov) => mov > 0)
-    .map((deposit) => deposit * (1.2 / 100))
+    .map((deposit) => deposit * (acc.interestRate / 100))
     .filter((int) => int > 1)
     .reduce((acc, int) => acc + int, 0);
   labelSumInterest.textContent = `${interest}€`;
 };
 
-calcDisplaySummary(account1.movements);
+// calcDisplaySummary(acc.movements);
 
 /////////////////////////////////////////////////
 // Coding Challenge #3
@@ -461,7 +461,7 @@ btnLogin.addEventListener("click", function (event) {
 
     displayMovements(currentAccount.movements);
     calcDisplayBalance(currentAccount.movements);
-    calcDisplaySummary(currentAccount.movements);
+    calcDisplaySummary(currentAccount);
   }
 });
 
