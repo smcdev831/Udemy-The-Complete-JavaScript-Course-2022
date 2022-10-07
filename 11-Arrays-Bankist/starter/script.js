@@ -321,11 +321,11 @@ console.log(balance2);
 balance = movements.reduce((acc, cur) => acc + cur, 0);
 console.log(balance);
 
-let calcDisplayBalance = function (movements) {
-  let balance = movements.reduce((acc, mov) => acc + mov, 0);
+let calcDisplayBalance = function (acc) {
+  acc.balance = acc.movements.reduce((acc, mov) => acc + mov, 0);
   labelBalance.textContent = `${balance} €`;
 };
-calcDisplayBalance(account1.movements);
+// calcDisplayBalance(currentAccount);
 
 let max = movements.reduce((acc, mov) => (acc > mov ? acc : mov));
 console.log(max);
@@ -475,6 +475,9 @@ btnTransfer.addEventListener("click", function (e) {
     (acc) => acc.username === inputTransferTo.value
   );
   console.log(amount, receiverAcc);
+
+  if (amount > 0) {
+  }
 });
 
 /////////////////////////////////////////////////
