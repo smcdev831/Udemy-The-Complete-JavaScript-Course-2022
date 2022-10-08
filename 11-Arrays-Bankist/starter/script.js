@@ -321,9 +321,10 @@ console.log(balance2);
 balance = movements.reduce((acc, cur) => acc + cur, 0);
 console.log(balance);
 
-const calcDisplayBalance = function (acc) {
-  acc.balance = acc.movements.reduce((acc, mov) => acc + mov, 0);
-  labelBalance.textContent = `${acc.balance}€`;
+let calcDisplayBalance = function (acc) {
+  let balance = movements.reduce((acc, mov) => acc + mov, 0);
+  acc.balance = balance;
+  labelBalance.textContent = `${balance} €`;
 };
 calcDisplayBalance(account1.movements);
 
