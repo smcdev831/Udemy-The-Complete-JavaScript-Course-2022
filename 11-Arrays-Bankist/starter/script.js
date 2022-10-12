@@ -445,31 +445,6 @@ console.log(account);
 /////////////////////////////////////////////////
 // Implementing Login
 
-let currentAccount;
-
-btnLogin.addEventListener("click", function (event) {
-  event.preventDefault();
-  currentAccount = accounts.find(
-    (acc) => acc.username === inputLoginUsername.value
-  );
-  console.log(currentAccount);
-
-  if (currentAccount?.pin === Number(inputLoginPin.value)) {
-    console.log("Login");
-    labelWelcome.textContent = `Welcome back, ${
-      currentAccount.owner.split(" ")[0]
-    }`;
-    containerApp.style.opacity = 100;
-
-    inputLoginUsername.value = inputLoginPin.value = "";
-    inputLoginPin.blur();
-
-    displayMovements(currentAccount.movements);
-    calcDisplayBalance(currentAccount);
-    calcDisplaySummary(currentAccount);
-  }
-});
-
 /////////////////////////////////////////////////
 // Implementing Transfers
 
