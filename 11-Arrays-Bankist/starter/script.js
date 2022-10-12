@@ -301,35 +301,6 @@ console.log(withdrawals);
 /////////////////////////////////////////////////
 // The reduce Method
 
-console.log(movements);
-let balance = movements.reduce(function (
-  accumulator,
-  currentValue,
-  index,
-  array
-) {
-  console.log(`Iteration ${index}: ${accumulator}`);
-  return accumulator + currentValue;
-},
-0);
-console.log(balance);
-
-let balance2 = 0;
-for (const mov of movements) balance2 += mov;
-console.log(balance2);
-
-balance = movements.reduce((acc, cur) => acc + cur, 0);
-console.log(balance);
-
-let calcDisplayBalance = function (acc) {
-  acc.balance = movements.reduce((acc, mov) => acc + mov, 0);
-  labelBalance.textContent = `${balance}€`;
-};
-// calcDisplayBalance(account1.movements);
-
-let max = movements.reduce((acc, mov) => (acc > mov ? acc : mov));
-console.log(max);
-
 /////////////////////////////////////////////////
 // Coding Challenge #2
 // Let's go back to Julia and Kate's study about dogs. This time, they want to convert dog ages to human ages and calculate the average age of the dogs in their study.
