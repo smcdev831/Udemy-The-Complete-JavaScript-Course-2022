@@ -473,23 +473,6 @@ btnLogin.addEventListener("click", function (event) {
 /////////////////////////////////////////////////
 // Implementing Transfers
 
-btnTransfer.addEventListener("click", function (e) {
-  e.preventDefault();
-  let amount = Number(inputTransferAmount.value);
-  let receiverAcc = accounts.find(
-    (acc) => acc.username === inputTransferTo.value
-  );
-  inputTransferAmount.value = inputTransferTo.value = "";
-  if (
-    amount > 0 &&
-    receiverAcc &&
-    currentAccount.balance >= amount &&
-    receiverAcc?.username !== currentAccount.username
-  ) {
-    console.log("7");
-  }
-});
-
 /////////////////////////////////////////////////
 // The findIndex Method
 
