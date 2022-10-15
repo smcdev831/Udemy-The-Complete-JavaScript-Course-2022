@@ -323,9 +323,9 @@ console.log(balance);
 
 let calcDisplayBalance = function (acc) {
   acc.balance = movements.reduce((acc, mov) => acc + mov, 0);
-  labelBalance.textContent = `${balance} €`;
+  labelBalance.textContent = `${balance}€`;
 };
-calcDisplayBalance(account1.movements);
+// calcDisplayBalance(account1.movements);
 
 let max = movements.reduce((acc, mov) => (acc > mov ? acc : mov));
 console.log(max);
