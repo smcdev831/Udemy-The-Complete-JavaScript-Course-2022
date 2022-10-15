@@ -324,8 +324,9 @@ console.log(balance);
 let calcDisplayBalance = function (acc) {
   let balance = movements.reduce((acc, mov) => acc + mov, 0);
   acc.balance = balance;
-  labelBalance.textContent = `${balance} €`;
+  labelBalance.textContent = `${balance}€`;
 };
+
 calcDisplayBalance(account1.movements);
 
 let max = movements.reduce((acc, mov) => (acc > mov ? acc : mov));
@@ -475,6 +476,7 @@ btnTransfer.addEventListener("click", function (e) {
   let receiverAcc = accounts.find(
     (acc) => acc.username === inputTransferTo.value
   );
+
   inputTransferAmount.value = inputTransferTo.value = "";
   if (
     amount > 0 &&
