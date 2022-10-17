@@ -301,6 +301,12 @@ console.log(withdrawals);
 /////////////////////////////////////////////////
 // The reduce Method
 
+let balance = movements.reduce(function (acc, cur, i, arr) {
+  console.log(`Iteration ${i}: ${acc}`);
+  return acc + cur;
+}, 0);
+console.log(balance);
+
 /////////////////////////////////////////////////
 // Coding Challenge #2
 // Let's go back to Julia and Kate's study about dogs. This time, they want to convert dog ages to human ages and calculate the average age of the dogs in their study.
