@@ -321,6 +321,11 @@ let calcDisplayBalance = function (movements) {
 };
 calcDisplayBalance(account1.movements);
 
+let max = movements.reduce((acc, mov) => {
+  return acc > mov ? acc : mov;
+}, movements[0]);
+console.log(max);
+
 /////////////////////////////////////////////////
 // Coding Challenge #2
 // Let's go back to Julia and Kate's study about dogs. This time, they want to convert dog ages to human ages and calculate the average age of the dogs in their study.
