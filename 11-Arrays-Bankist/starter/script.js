@@ -387,20 +387,20 @@ totalDepositsUSD = movements
   .reduce((acc, mov) => acc + mov, 0);
 console.log(totalDepositsUSD);
 
-let calcDisplaySummary = function (movements) {
-  let incomes = movements
+let calcDisplaySummary = function (acc) {
+  let incomes = acc.movements
     .filter((mov) => mov > 0)
     .reduce((acc, mov) => acc + mov, 0);
   labelSumIn.textContent = `${incomes}€`;
 
-  let withdrawals = movements
+  let withdrawals = acc.movements
     .filter((mov) => mov < 0)
     .reduce((acc, mov) => acc + mov, 0);
   labelSumOut.textContent = `${Math.abs(withdrawals)}€`;
 
-  let interest = movements
+  let interest = acc.movements
     .filter((mov) => mov > 0)
-    .map((deposit) => (deposit * 1.2) / 100)
+    .map((deposit) => (deposit * acc.interestRate) / 100)
     .filter((int, i, arr) => {
       return int >= 1;
     })
@@ -455,10 +455,15 @@ btnLogin.addEventListener("click", function (event) {
     labelWelcome.textContent = `Welcome back, ${
       currentAccount.owner.split(" ")[0]
     }`;
+
     containerApp.style.opacity = 100;
+
+    inputLoginUsername.value = inputLoginPin.value = "";
+    inputLoginPin.blur();
+
     displayMovements(currentAccount.movements);
     calcDisplayBalance(currentAccount.movements);
-    calcDisplaySummary(currentAccount.movements);
+    calcDisplaySummary(currentAccount);
   }
 });
 
