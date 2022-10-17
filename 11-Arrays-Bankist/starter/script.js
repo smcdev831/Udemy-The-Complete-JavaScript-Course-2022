@@ -387,6 +387,25 @@ totalDepositsUSD = movements
   .reduce((acc, mov) => acc + mov, 0);
 console.log(totalDepositsUSD);
 
+let calcDisplaySummary = function (movements) {
+  let incomes = movements
+    .filter((mov) => mov > 0)
+    .reduce((acc, mov) => acc + mov, 0);
+  labelSumIn.textContent = `${incomes}€`;
+
+  let withdrawals = movements
+    .filter((mov) => mov < 0)
+    .reduce((acc, mov) => acc + mov, 0);
+  labelSumOut.textContent = `${Math.abs(withdrawals)}€`;
+
+  let interest = movements
+    .filter((mov) => mov > 0)
+    .map((deposit) => (deposit * 1.2) / 100)
+    .reduce((acc, int) => acc + int, 0);
+  labelSumInterest.textContent(`${interest}€`);
+};
+calcDisplaySummary(account1.movements);
+
 /////////////////////////////////////////////////
 // Coding Challenge #3
 // Rewrite the 'calcAverageHumanAge' function from Challenge #2, but this time as an arrow function, and using chaining!
