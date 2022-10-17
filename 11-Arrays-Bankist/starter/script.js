@@ -372,6 +372,21 @@ calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
 /////////////////////////////////////////////////
 // The Magic of Chaining Methods
 
+let totalDepositsUSD = movements
+  .filter((mov) => mov > 0)
+  .map((mov) => mov * eurToUsd)
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(totalDepositsUSD);
+
+totalDepositsUSD = movements
+  .filter((mov) => mov > 0)
+  .map((mov, i, arr) => {
+    console.log(arr);
+    return mov * eurToUsd;
+  })
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(totalDepositsUSD);
+
 /////////////////////////////////////////////////
 // Coding Challenge #3
 // Rewrite the 'calcAverageHumanAge' function from Challenge #2, but this time as an arrow function, and using chaining!
