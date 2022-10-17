@@ -192,7 +192,7 @@ let displayMovements = function (movements) {
   });
 };
 
-displayMovements(account1.movements);
+// displayMovements(account1.movements);
 
 /////////////////////////////////////////////////
 // Coding Challenge #1
@@ -319,7 +319,7 @@ let calcDisplayBalance = function (movements) {
   let balance = movements.reduce((acc, mov) => acc + mov, 0);
   labelBalance.textContent = `${balance}€`;
 };
-calcDisplayBalance(account1.movements);
+// calcDisplayBalance(account1.movements);
 
 let max = movements.reduce((acc, mov) => {
   return acc > mov ? acc : mov;
@@ -407,7 +407,7 @@ let calcDisplaySummary = function (movements) {
     .reduce((acc, int) => acc + int, 0);
   labelSumInterest.textContent = `${interest}€`;
 };
-calcDisplaySummary(account1.movements);
+// calcDisplaySummary(account1.movements);
 
 /////////////////////////////////////////////////
 // Coding Challenge #3
@@ -456,6 +456,9 @@ btnLogin.addEventListener("click", function (event) {
       currentAccount.owner.split(" ")[0]
     }`;
     containerApp.style.opacity = 100;
+    displayMovements(currentAccount.movements);
+    calcDisplayBalance(currentAccount.movements);
+    calcDisplaySummary(currentAccount.movements);
   }
 });
 
