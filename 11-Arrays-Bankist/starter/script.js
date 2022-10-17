@@ -307,6 +307,14 @@ let balance = movements.reduce(function (acc, cur, i, arr) {
 }, 0);
 console.log(balance);
 
+//refactoring
+balance = movements.reduce((acc, cur) => acc + cur);
+console.log(balance);
+
+let balance2 = 0;
+for (let mov of movements) balance2 += mov;
+console.log(balance2);
+
 /////////////////////////////////////////////////
 // Coding Challenge #2
 // Let's go back to Julia and Kate's study about dogs. This time, they want to convert dog ages to human ages and calculate the average age of the dogs in their study.
