@@ -429,6 +429,10 @@ console.log(avg1, avg2);
 /////////////////////////////////////////////////
 // The find Method
 
+let firstWithdrawl = movements.find((mov) => mov < 0);
+console.log(movements);
+console.log(firstWithdrawl);
+
 /////////////////////////////////////////////////
 // Implementing Login
 
