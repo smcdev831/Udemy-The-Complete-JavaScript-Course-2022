@@ -315,6 +315,12 @@ let balance2 = 0;
 for (let mov of movements) balance2 += mov;
 console.log(balance2);
 
+let calcDisplayBalance = function (movements) {
+  let balance = movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${balance}€`;
+};
+calcDisplayBalance(account1.movements);
+
 /////////////////////////////////////////////////
 // Coding Challenge #2
 // Let's go back to Julia and Kate's study about dogs. This time, they want to convert dog ages to human ages and calculate the average age of the dogs in their study.
@@ -360,8 +366,6 @@ calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
 
 /////////////////////////////////////////////////
 // The Magic of Chaining Methods
-
-// calcDisplaySummary(account1.movements);
 
 /////////////////////////////////////////////////
 // Coding Challenge #3
