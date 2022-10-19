@@ -315,8 +315,9 @@ let balance2 = 0;
 for (let mov of movements) balance2 += mov;
 console.log(balance2);
 
-let calcDisplayBalance = function (movements) {
-  let balance = movements.reduce((acc, mov) => acc + mov, 0);
+let calcDisplayBalance = function (acc) {
+  let balance = acc.movements.reduce((acc, mov) => acc + mov, 0);
+  acc.balance = balance;
   labelBalance.textContent = `${balance}€`;
 };
 // calcDisplayBalance(account1.movements);
@@ -462,13 +463,25 @@ btnLogin.addEventListener("click", function (event) {
     inputLoginPin.blur();
 
     displayMovements(currentAccount.movements);
-    calcDisplayBalance(currentAccount.movements);
+    calcDisplayBalance(currentAccount);
     calcDisplaySummary(currentAccount);
   }
 });
 
 /////////////////////////////////////////////////
 // Implementing Transfers
+
+btnTransfer.addEventListener("click", function (e) {
+  e.preventDefault();
+  let amount = Number(inputTransferAmount.value);
+  let receiverAcc = accounts.find(
+    (acc) => acc.username === inputTransferTo.value
+  );
+  console.log(amount, receiverAcc);
+
+  if (amount > 0 && amount < balance) {
+  }
+});
 
 /////////////////////////////////////////////////
 // The findIndex Method
