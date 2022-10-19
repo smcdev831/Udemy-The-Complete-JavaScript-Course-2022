@@ -461,12 +461,15 @@ btnLogin.addEventListener("click", function (event) {
 
     inputLoginUsername.value = inputLoginPin.value = "";
     inputLoginPin.blur();
-
-    displayMovements(currentAccount.movements);
-    calcDisplayBalance(currentAccount);
-    calcDisplaySummary(currentAccount);
+    updateUI(currentAccount);
   }
 });
+
+let updateUI = function (acc) {
+  displayMovements(acc.movements);
+  calcDisplayBalance(acc);
+  calcDisplaySummary(acc);
+};
 
 /////////////////////////////////////////////////
 // Implementing Transfers
@@ -488,6 +491,7 @@ btnTransfer.addEventListener("click", function (e) {
     currentAccount.movements.push(-amount);
     receiverAcc.movements.push(amount);
     console.log("Transfer Valid");
+    updateUI(currentAccount);
   }
 });
 
