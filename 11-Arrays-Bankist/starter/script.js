@@ -480,6 +480,7 @@ btnTransfer.addEventListener("click", function (e) {
     (acc) => acc.username === inputTransferTo.value
   );
   console.log(amount, receiverAcc);
+  inputTransferAmount.value = inputTransferTo.value = "";
 
   if (
     amount > 0 &&
@@ -490,6 +491,7 @@ btnTransfer.addEventListener("click", function (e) {
     currentAccount.movements.push(-amount);
     receiverAcc.movements.push(amount);
     console.log("Transfer Valid");
+
     updateUI(currentAccount);
   }
 });
