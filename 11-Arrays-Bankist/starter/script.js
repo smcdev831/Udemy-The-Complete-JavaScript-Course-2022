@@ -499,6 +499,19 @@ btnTransfer.addEventListener("click", function (e) {
 /////////////////////////////////////////////////
 // The findIndex Method
 
+btnClose.addEventListener("click", function (e) {
+  e.preventDefault();
+  console.log("Delete");
+  if (
+    Number(inputClosePin.value) === currentAccount.pin &&
+    inputCloseUsername.value === currentAccount.username
+  ) {
+    console.log("Deleted");
+  } else {
+    console.log("Broken");
+  }
+});
+
 /////////////////////////////////////////////////
 // some and every
 
