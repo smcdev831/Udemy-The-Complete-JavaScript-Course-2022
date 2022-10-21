@@ -583,6 +583,19 @@ console.log(overallBalance3);
 /////////////////////////////////////////////////
 // Sorting Arrays
 
+let owners = ["Jonas", "Zach", "Adam", "Martha"];
+console.log(owners.sort());
+console.log(owners);
+
+console.log(movements);
+console.log(movements.sort());
+
+movements.sort((a, b) => {
+  if (a > b) return 1;
+  if (b > a) return -1;
+});
+console.log(movements);
+
 /////////////////////////////////////////////////
 // More Ways of Creating and Filling Arrays
 
