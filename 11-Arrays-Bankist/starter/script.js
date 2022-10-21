@@ -510,7 +510,7 @@ btnClose.addEventListener("click", function (e) {
       (acc) => acc.username === currentAccount.username
     );
     accounts.splice(index, 1);
-    // containerApp.style.opacity = 100;
+    containerApp.style.opacity = 0;
     console.log(accounts);
   }
 });
