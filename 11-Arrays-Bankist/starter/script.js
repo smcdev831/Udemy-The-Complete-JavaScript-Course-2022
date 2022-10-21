@@ -178,7 +178,9 @@ currenciesUnique.forEach((value, key, map) => {
 let displayMovements = function (movements, sort = false) {
   containerMovements.innerHTML = "";
 
-  movements.forEach((mov, i) => {
+  let movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
+
+  movs.forEach((mov, i) => {
     let type = mov > 0 ? "deposit" : "withdrawal";
     let html = `
     <div class="movements__row">
@@ -610,10 +612,12 @@ console.log(movements);
 movements.sort((a, b) => b - a);
 console.log(movements);
 
-let movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
+let sorted = false;
 
 btnSort.addEventListener("click", function (e) {
   e.preventDefault();
+  displayMovements(currentAccount.movements, !sorted);
+  sorted = !sorted;
 });
 
 /////////////////////////////////////////////////
