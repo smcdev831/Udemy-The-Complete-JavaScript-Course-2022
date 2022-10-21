@@ -590,10 +590,24 @@ console.log(owners);
 console.log(movements);
 console.log(movements.sort());
 
+//ascending
 movements.sort((a, b) => {
   if (a > b) return 1;
   if (b > a) return -1;
 });
+console.log(movements);
+
+movements.sort((a, b) => a - b);
+console.log(movements);
+
+//descending
+movements.sort((a, b) => {
+  if (a > b) return -1;
+  if (b > a) return 1;
+});
+console.log(movements);
+
+movements.sort((a, b) => b - a);
 console.log(movements);
 
 /////////////////////////////////////////////////
