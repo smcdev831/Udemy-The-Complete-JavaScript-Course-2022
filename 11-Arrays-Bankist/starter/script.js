@@ -545,6 +545,12 @@ btnLoan.addEventListener("click", function (e) {
 console.log(movements.every((mov) => mov > 0));
 console.log(account4.movements.every((mov) => mov > 0));
 
+let deposit = (mov) => mov > 0;
+
+console.log(movements.some(deposit));
+console.log(movements.every(deposit));
+console.log(movements.filter(deposit));
+
 /////////////////////////////////////////////////
 // flat and flatMap
 
