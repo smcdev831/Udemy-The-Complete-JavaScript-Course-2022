@@ -517,6 +517,31 @@ btnClose.addEventListener("click", function (e) {
 /////////////////////////////////////////////////
 // some and every
 
+console.log(movements);
+console.log(movements.includes(-130));
+
+let anyDeposits = movements.some((mov) => mov > 0);
+console.log(anyDeposits);
+
+anyDeposits = movements.some((mov) => mov > 5000);
+console.log(anyDeposits);
+
+btnLoan.addEventListener("click", function (e) {
+  e.preventDefault();
+  let amount = Number(inputLoanAmount.value);
+
+  if (
+    amount > 0 &&
+    currentAccount.movements.some((mov) => mov >= amount * 0.1)
+  ) {
+    currentAccount.movements.push(amount);
+    inputLoanAmount.value = "";
+    updateUI(currentAccount);
+  } else {
+    console.log("Denied");
+  }
+});
+
 /////////////////////////////////////////////////
 // flat and flatMap
 
