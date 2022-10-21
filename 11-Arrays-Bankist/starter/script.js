@@ -569,6 +569,12 @@ console.log(allMovements);
 let overallBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
 console.log(overallBalance);
 
+let overallBalance2 = accounts
+  .map((acc) => acc.movements)
+  .flat()
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(overallBalance2);
+
 /////////////////////////////////////////////////
 // Sorting Arrays
 
