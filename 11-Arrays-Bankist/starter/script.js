@@ -175,7 +175,7 @@ currenciesUnique.forEach((value, key, map) => {
 /////////////////////////////////////////////////
 // Creating DOM Elements
 
-let displayMovements = function (movements) {
+let displayMovements = function (movements, sort = false) {
   containerMovements.innerHTML = "";
 
   movements.forEach((mov, i) => {
@@ -609,6 +609,12 @@ console.log(movements);
 
 movements.sort((a, b) => b - a);
 console.log(movements);
+
+let movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
+
+btnSort.addEventListener("click", function (e) {
+  e.preventDefault();
+});
 
 /////////////////////////////////////////////////
 // More Ways of Creating and Filling Arrays
