@@ -506,9 +506,12 @@ btnClose.addEventListener("click", function (e) {
     Number(inputClosePin.value) === currentAccount.pin &&
     inputCloseUsername.value === currentAccount.username
   ) {
-    console.log("Deleted");
-  } else {
-    console.log("Broken");
+    let index = accounts.findIndex(
+      (acc) => acc.username === currentAccount.username
+    );
+    accounts.splice(index, 1);
+    // containerApp.style.opacity = 100;
+    console.log(accounts);
   }
 });
 
