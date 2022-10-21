@@ -554,6 +554,21 @@ console.log(movements.filter(deposit));
 /////////////////////////////////////////////////
 // flat and flatMap
 
+arr = [[1, 2, 3], [4, 5, 6], 7, 8];
+console.log(arr.flat());
+
+let arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
+console.log(arrDeep.flat(2));
+
+let accountMovements = accounts.map((acc) => acc.movements);
+console.log(accountMovements);
+
+let allMovements = accountMovements.flat();
+console.log(allMovements);
+
+let overallBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
+console.log(overallBalance);
+
 /////////////////////////////////////////////////
 // Sorting Arrays
 
