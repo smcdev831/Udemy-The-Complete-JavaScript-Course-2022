@@ -623,6 +623,29 @@ btnSort.addEventListener("click", function (e) {
 /////////////////////////////////////////////////
 // More Ways of Creating and Filling Arrays
 
+console.log([1, 2, 3, 4, 5, 6, 7]);
+console.log(new Array(1, 2, 3, 4, 5, 6, 7));
+
+let x = new Array(7);
+console.log(x);
+console.log(x.map(() => 5));
+
+// x.fill(1);
+// console.log(x);
+
+// x.fill(1, 3);
+// console.log(x);
+
+x.fill(1, 3, 5);
+console.log(x);
+
+arr = [1, 2, 3, 4, 5, 6, 7];
+arr.fill(23, 4, 6);
+console.log(arr);
+
+let y = Array.from({ length: 7 }, () => 1);
+console.log(y);
+
 /////////////////////////////////////////////////
 // Summary: Which Method to Use?
 
