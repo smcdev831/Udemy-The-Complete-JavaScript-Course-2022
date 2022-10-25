@@ -646,6 +646,18 @@ console.log(arr);
 let y = Array.from({ length: 7 }, () => 1);
 console.log(y);
 
+let z = Array.from({ length: 7 }, (_, i) => i + 1);
+console.log(z);
+
+let movementsUI = Array.from(document.querySelectorAll(".movements__value"));
+console.log(movementsUI);
+
+let randomDice = Array.from(
+  { length: 100 },
+  () => Math.floor(Math.random() * 6) + 1
+);
+console.log(randomDice);
+
 /////////////////////////////////////////////////
 // Summary: Which Method to Use?
 
