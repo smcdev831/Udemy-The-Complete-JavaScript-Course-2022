@@ -741,6 +741,8 @@ Based on callback
 /////////////////////////////////////////////////
 // Array Methods Practice
 
+
+
 /////////////////////////////////////////////////
 // Coding Challenge #4
 // Julia and Kate are still studying dogs, and this time they are studying if dogs areeating too much or too little. Eating too much means the dog's current food portion is larger than the recommended portion, and eating too little is the opposite. Eating an okay amount means the dog's current food portion is within a range 10% above and 10% below the recommended portion (see hint).
