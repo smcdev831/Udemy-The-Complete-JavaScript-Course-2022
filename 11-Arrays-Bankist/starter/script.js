@@ -649,8 +649,10 @@ console.log(y);
 let z = Array.from({ length: 7 }, (_, i) => i + 1);
 console.log(z);
 
-let movementsUI = Array.from(document.querySelectorAll(".movements__value"));
-console.log(movementsUI);
+labelBalance.addEventListener("click", function () {
+  let movementsUI = Array.from(document.querySelectorAll(".movements__value"));
+  console.log(movementsUI);
+});
 
 let randomDice = Array.from(
   { length: 100 },
