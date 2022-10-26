@@ -753,6 +753,23 @@ let numDeposits1000 = accounts
   .reduce((acc, cv) => acc + 1, 0);
 console.log(numDeposits1000);
 
+//prefixed ++
+let a = 10;
+console.log(a++);
+console.log(a);
+console.log(++a);
+
+let sums = accounts
+  .flatMap((acc) => acc.movements)
+  .reduce(
+    (sums, cur) => {
+      cur > 0 ? (sums.deposits += cur) : (sums.withdrawals += cur);
+      return sums;
+    },
+    { deposits: 0, withdrawals: 0 }
+  );
+console.log(sums);
+
 /////////////////////////////////////////////////
 // Coding Challenge #4
 // Julia and Kate are still studying dogs, and this time they are studying if dogs areeating too much or too little. Eating too much means the dog's current food portion is larger than the recommended portion, and eating too little is the opposite. Eating an okay amount means the dog's current food portion is within a range 10% above and 10% below the recommended portion (see hint).
