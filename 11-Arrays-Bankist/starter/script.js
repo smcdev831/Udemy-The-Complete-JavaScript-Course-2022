@@ -668,80 +668,90 @@ let movementsUI2 = [...document.querySelectorAll(".movements__value")];
 /////////////////////////////////////////////////
 // Summary: Which Method to Use?
 
-Mutate original array
-Add to original
-1. push
-2. unshift
+// Mutate original array
+// Add to original
+// 1. push
+// 2. unshift
 
-Remove from original
-3. pop
-4. shift
-5. splice
+// Remove from original
+// 3. pop
+// 4. shift
+// 5. splice
 
-Others
-6. reverse
-7. sort
-8. fill
+// Others
+// 6. reverse
+// 7. sort
+// 8. fill
 
-///////
-A new array
-Computed from original
-9.map
+// ///////
+// A new array
+// Computed from original
+// 9.map
 
-Filtered using a condition
-10. filter
+// Filtered using a condition
+// 10. filter
 
-Portion of original
-11. slice
+// Portion of original
+// 11. slice
 
-Adding Original to other
-12. concat
+// Adding Original to other
+// 12. concat
 
-Flattening the original
-13. flat
-14. flatMap
+// Flattening the original
+// 13. flat
+// 14. flatMap
 
-///////
-An array index
-Based on value
-15. indexOf
+// ///////
+// An array index
+// Based on value
+// 15. indexOf
 
-Based on test condition
-16. findIndex
+// Based on test condition
+// 16. findIndex
 
-///////
-An array element
-Based on test condition
-17. find
+// ///////
+// An array element
+// Based on test condition
+// 17. find
 
-///////
-Know if an array includes
-Based on value
-18. includes
+// ///////
+// Know if an array includes
+// Based on value
+// 18. includes
 
-Based on test condition
-19. some
-20. every
+// Based on test condition
+// 19. some
+// 20. every
 
-///////
-A new String
-based on separator string
-21. join
+// ///////
+// A new String
+// based on separator string
+// 21. join
 
-///////
-To transform to value
-Based on accumulator
-22. reduce
+// ///////
+// To transform to value
+// Based on accumulator
+// 22. reduce
 
-///////
-To just loop array
-Based on callback
-23. forEach
+// ///////
+// To just loop array
+// Based on callback
+// 23. forEach
 
 /////////////////////////////////////////////////
 // Array Methods Practice
 
+let bankDepositSum = accounts
+  .flatMap((acc) => acc.movements)
+  .filter((mov) => mov > 0)
+  .reduce((sum, cur) => sum + cur, 0);
+console.log(bankDepositSum);
 
+let numDeposits1000 = accounts
+  .flatMap((acc) => acc.movements)
+  .filter((mov) => mov >= 1000)
+  .reduce((acc, cv) => acc + 1, 0);
+console.log(numDeposits1000);
 
 /////////////////////////////////////////////////
 // Coding Challenge #4
