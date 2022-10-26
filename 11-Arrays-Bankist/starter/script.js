@@ -663,6 +663,8 @@ labelBalance.addEventListener("click", function () {
   console.log(movementsUI);
 });
 
+let movementsUI2 = [...document.querySelectorAll(".movements__value")];
+
 /////////////////////////////////////////////////
 // Summary: Which Method to Use?
 
