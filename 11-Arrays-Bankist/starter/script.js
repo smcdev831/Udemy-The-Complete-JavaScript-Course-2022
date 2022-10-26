@@ -810,8 +810,7 @@ console.log(converTitleCase("and here is another title with an EXAMPLE"));
 // 8. Create a shallow copy of the 'dogs' array and sort it by recommended food portion in an ascending order (keep in mind that the portions are inside the array's objects 😉)
 // Hints:
 // § Use many different tools to solve these challenges, you can use the summarylecture to choose between them 😉
-// § Being within a range 10% above and below the recommended portion means:current > (recommended * 0.90) && current < (recommended *
-// 1.10). Basically, the current portion should be between 90% and 110% of the recommended portion.
+// § Being within a range 10% above and below the recommended portion means:current > (recommended * 0.90) && current < (recommended * 1.10). Basically, the current portion should be between 90% and 110% of the recommended portion.
 
 // Test data:
 const dogs = [
