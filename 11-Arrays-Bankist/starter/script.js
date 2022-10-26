@@ -781,9 +781,24 @@ let { depositss, withdrawalss } = accounts
   );
 console.log(depositss, withdrawalss);
 
+let converTitleCase = function (title) {
+  let exceptions = ["a", "an", "the", "but", "or", "on", "in", "with"];
+  let titleCase = title
+    .toLowerCase()
+    .split(" ")
+    .map((word) =>
+      exceptions.includes(word) ? word : word[0].toUpperCase() + word.slice(1)
+    )
+    .join(" ");
+  return titleCase;
+};
+console.log(converTitleCase("this is a nice title"));
+console.log(converTitleCase("this is a LONG title but not too long"));
+console.log(converTitleCase("and here is another title with an EXAMPLE"));
+
 /////////////////////////////////////////////////
 // Coding Challenge #4
-// Julia and Kate are still studying dogs, and this time they are studying if dogs areeating too much or too little. Eating too much means the dog's current food portion is larger than the recommended portion, and eating too little is the opposite. Eating an okay amount means the dog's current food portion is within a range 10% above and 10% below the recommended portion (see hint).
+// Julia and Kate are still studying dogs, and this time they are studying if dogs are eating too much or too little. Eating too much means the dog's current food portion is larger than the recommended portion, and eating too little is the opposite. Eating an okay amount means the dog's current food portion is within a range 10% above and 10% below the recommended portion (see hint).
 // Your tasks:
 // 1. Loop over the 'dogs' array containing dog objects, and for each dog, calculate the recommended food portion and add it to the object as a new property. Do not create a new array, simply loop over the array. Forumla: recommendedFood = weight ** 0.75 * 28. (The result is in grams of food, and the weight needs to be in kg)
 // 2. Find Sarah's dog and log to the console whether it's eating too much or too little. Hint: Some dogs have multiple owners, so you first need to find Sarah in the owners array, and so this one is a bit tricky (on purpose) 🤓
