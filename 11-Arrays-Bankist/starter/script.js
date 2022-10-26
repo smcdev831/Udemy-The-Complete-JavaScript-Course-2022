@@ -668,12 +668,12 @@ let movementsUI2 = [...document.querySelectorAll(".movements__value")];
 /////////////////////////////////////////////////
 // Summary: Which Method to Use?
 
-Mutate Original Array
-Add to Original
+Mutate original array
+Add to original
 1. push
 2. unshift
 
-Remove from Original
+Remove from original
 3. pop
 4. shift
 5. splice
@@ -683,21 +683,60 @@ Others
 7. sort
 8. fill
 
-9.
-10.
-11.
-12.
-13.
-14.
-15.
-16.
-17.
-18.
-19.
-20.
-21.
-22.
-23.
+///////
+A new array
+Computed from original
+9.map
+
+Filtered using a condition
+10. filter
+
+Portion of original
+11. slice
+
+Adding Original to other
+12. concat
+
+Flattening the original
+13. flat
+14. flatMap
+
+///////
+An array index
+Based on value
+15. indexOf
+
+Based on test condition
+16. findIndex
+
+///////
+An array element
+Based on test condition
+17. find
+
+///////
+Know if an array includes
+Based on value
+18. includes
+
+Based on test condition
+19. some
+20. every
+
+///////
+A new String
+based on separator string
+21. join
+
+///////
+To transform to value
+Based on accumulator
+22. reduce
+
+///////
+To just loop array
+Based on callback
+23. forEach
 
 /////////////////////////////////////////////////
 // Array Methods Practice
