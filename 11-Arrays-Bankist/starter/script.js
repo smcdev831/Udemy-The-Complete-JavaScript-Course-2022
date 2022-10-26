@@ -187,7 +187,7 @@ let displayMovements = function (movements, sort = false) {
       <div class="movements__type movements__type--${type}">${
       i + 1
     } ${type}</div>
-      <div class="movements__value">${mov}</div>
+      <div class="movements__value">${mov}€</div>
     </div>`;
 
     containerMovements.insertAdjacentHTML("afterbegin", html);
@@ -651,7 +651,7 @@ console.log(z);
 
 labelBalance.addEventListener("click", function () {
   let movementsUI = Array.from(document.querySelectorAll(".movements__value"));
-  console.log(movementsUI);
+  console.log(movementsUI.map((mov) => Number(mov.textContent)));
 });
 
 let randomDice = Array.from(
