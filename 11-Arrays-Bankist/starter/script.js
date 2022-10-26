@@ -821,3 +821,8 @@ const dogs = [
 ];
 
 // GOOD LUCK 😀
+
+dogs.forEach((dog) => (dog.recFood = Math.trunc(dog.weight ** 0.75 * 28)));
+console.log(dogs);
+
+dogs.forEach((dog) => (dog.recFood = Math.trunc(dog.weight ** 0.75 * 28)));
