@@ -363,6 +363,9 @@ labelBalance.addEventListener("click", function () {
 /////////////////////////////////////////////////
 // Numeric Separators
 
+//287,460,000,000
+let diameter = 287460000000;
+
 /////////////////////////////////////////////////
 // Working with BigInt
 
