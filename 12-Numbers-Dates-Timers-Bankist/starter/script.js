@@ -371,6 +371,18 @@ console.log(diameterUS);
 let priceInCents = 345_99;
 console.log(priceInCents);
 
+let transferFee1 = 15_00;
+let transferFee2 = 1_500;
+console.log(transferFee1);
+console.log(transferFee2);
+
+let PI = 3.1415;
+console.log(PI);
+
+console.log(Number("230000"));
+console.log(Number("230_000"));
+console.log(parseInt("230_000"));
+
 /////////////////////////////////////////////////
 // Working with BigInt
 
