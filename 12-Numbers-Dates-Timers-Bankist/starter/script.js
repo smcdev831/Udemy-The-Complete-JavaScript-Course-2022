@@ -365,6 +365,11 @@ labelBalance.addEventListener("click", function () {
 
 //287,460,000,000
 let diameter = 287460000000;
+let diameterUS = 287_460_000_000;
+console.log(diameterUS);
+
+let priceInCents = 345_99;
+console.log(priceInCents);
 
 /////////////////////////////////////////////////
 // Working with BigInt
