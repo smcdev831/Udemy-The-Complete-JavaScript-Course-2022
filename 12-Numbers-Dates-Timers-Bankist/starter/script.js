@@ -91,11 +91,19 @@ const displayMovements = function (acc, sort = false) {
   movs.forEach(function (mov, i) {
     const type = mov > 0 ? "deposit" : "withdrawal";
 
+    let date = new Date(acc.movementsDates[i]);
+    let day = `${date.getDate()}`.padStart(2, 0);
+    let month = `${date.getMonth() + 1}`.padStart(2, 0);
+    let year = date.getFullYear();
+
+    let displayDate = `${day}/${month}/${year}`;
+
     const html = `
       <div class="movements__row">
         <div class="movements__type movements__type--${type}">${
       i + 1
     } ${type}</div>
+        <div class="movements__date">${displayDate}</div>
         <div class="movements__value">${mov.toFixed(2)}€</div>
       </div>
     `;
@@ -173,6 +181,14 @@ btnLogin.addEventListener("click", function (e) {
     }`;
     containerApp.style.opacity = 100;
 
+    now = new Date();
+    let day = `${now.getDate()}`.padStart(2, 0);
+    let month = `${now.getMonth() + 1}`.padStart(2, 0);
+    let year = now.getFullYear();
+    let hour = now.getHours();
+    let minute = now.getMinutes();
+    labelDate.textContent = `${day}/${month}/${year}, ${hour}:${minute}`;
+
     // Clear input fields
     inputLoginUsername.value = inputLoginPin.value = "";
     inputLoginPin.blur();
@@ -200,6 +216,11 @@ btnTransfer.addEventListener("click", function (e) {
     currentAccount.movements.push(-amount);
     receiverAcc.movements.push(amount);
 
+    //Add transfer date
+
+    currentAccount.movementsDates.push(new Date());
+    receiverAcc.movementsDates.push(new Date());
+
     // Update UI
     updateUI(currentAccount);
   }
@@ -216,6 +237,9 @@ btnLoan.addEventListener("click", function (e) {
   ) {
     // Add movement
     currentAccount.movements.push(amount);
+
+    //Add loan date
+    currentAccount.movementsDates.push(new Date());
 
     // Update UI
     updateUI(currentAccount);
@@ -461,14 +485,6 @@ console.log(future);
 currentAccount = account1;
 updateUI(currentAccount);
 containerApp.style.opacity = 100;
-
-now = new Date();
-let day = `${now.getDay()}`.padStart(2, 0);
-let month = `${now.getMonth() + 1}`.padStart(2, 0);
-let year = now.getFullYear();
-let hour = now.getHours();
-let minute = now.getMinutes();
-labelDate.textContent = `${day}/${month}/${year}, ${hour}:${minute}`;
 
 /////////////////////////////////////////////////
 // Operations with Dates
