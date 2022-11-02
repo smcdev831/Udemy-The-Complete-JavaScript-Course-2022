@@ -109,6 +109,10 @@ const displayMovements = function (acc, sort = false) {
     const type = mov > 0 ? "deposit" : "withdrawal";
     let date = new Date(acc.movementsDates[i]);
     let displayDate = formatMovementDate(date, acc.locale);
+    let formattedMov = new Intl.NumberFormat(acc.locale, {
+      style: "currency",
+      currency: "USD",
+    });
 
     const html = `
       <div class="movements__row">
@@ -116,7 +120,7 @@ const displayMovements = function (acc, sort = false) {
       i + 1
     } ${type}</div>
         <div class="movements__date">${displayDate}</div>
-        <div class="movements__value">${mov.toFixed(2)}€</div>
+        <div class="movements__value">${formattedMov}</div>
       </div>
     `;
 
