@@ -111,7 +111,7 @@ const displayMovements = function (acc, sort = false) {
     let displayDate = formatMovementDate(date, acc.locale);
     let formattedMov = new Intl.NumberFormat(acc.locale, {
       style: "currency",
-      currency: "USD",
+      currency: acc.currency,
     }).format(mov);
 
     const html = `
