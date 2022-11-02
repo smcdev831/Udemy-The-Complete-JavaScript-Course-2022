@@ -456,6 +456,18 @@ console.log(future);
 /////////////////////////////////////////////////
 // Adding Dates to 'Bankist' App
 
+currentAccount = account1;
+updateUI(currentAccount);
+containerApp.style.opacity = 100;
+
+now = new Date();
+let day = now.getDay();
+let month = now.getMonth() + 1;
+let year = now.getFullYear();
+let hour = now.getHours();
+let minute = now.getMinutes();
+labelDate.textContent = `${day}/${month}/${year}, ${hour}:${minute}`;
+
 /////////////////////////////////////////////////
 // Operations with Dates
 
