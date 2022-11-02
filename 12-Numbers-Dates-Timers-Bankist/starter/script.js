@@ -81,7 +81,7 @@ const inputClosePin = document.querySelector(".form__input--pin");
 /////////////////////////////////////////////////
 // Functions
 
-let formatMovementDate = function (date) {
+let formatMovementDate = function (date, locale) {
   let calcDaysPassed = (date1, date2) =>
     Math.round(Math.abs(date2 - date1) / (1000 * 60 * 60 * 24));
 
@@ -92,10 +92,10 @@ let formatMovementDate = function (date) {
   if (daysPassed === 1) return "Yesterday";
   if (daysPassed <= 7) return `${daysPassed} days ago`;
 
-  let day = `${date.getDate()}`.padStart(2, 0);
-  let month = `${date.getMonth() + 1}`.padStart(2, 0);
-  let year = date.getFullYear();
-  return `${day}/${month}/${year}`;
+  // let day = `${date.getDate()}`.padStart(2, 0);
+  // let month = `${date.getMonth() + 1}`.padStart(2, 0);
+  // let year = date.getFullYear();
+  return new Intl.DateTimeFormat(locale).format(date);
 };
 
 const displayMovements = function (acc, sort = false) {
@@ -108,7 +108,7 @@ const displayMovements = function (acc, sort = false) {
   movs.forEach(function (mov, i) {
     const type = mov > 0 ? "deposit" : "withdrawal";
     let date = new Date(acc.movementsDates[i]);
-    let displayDate = formatMovementDate(date);
+    let displayDate = formatMovementDate(date, acc.locale);
 
     const html = `
       <div class="movements__row">
@@ -193,13 +193,28 @@ btnLogin.addEventListener("click", function (e) {
     }`;
     containerApp.style.opacity = 100;
 
+    // now = new Date();
+    // let day = `${now.getDate()}`.padStart(2, 0);
+    // let month = `${now.getMonth() + 1}`.padStart(2, 0);
+    // let year = now.getFullYear();
+    // let hour = `${now.getHours()}`.padStart(0, 2);
+    // let minute = `${now.getMinutes()}`.padStart(2, 0);
+    // labelDate.textContent = `${day}/${month}/${year}, ${hour}:${minute}`;
+
     now = new Date();
-    let day = `${now.getDate()}`.padStart(2, 0);
-    let month = `${now.getMonth() + 1}`.padStart(2, 0);
-    let year = now.getFullYear();
-    let hour = `${now.getHours()}`.padStart(0, 2);
-    let minute = `${now.getMinutes()}`.padStart(2, 0);
-    labelDate.textContent = `${day}/${month}/${year}, ${hour}:${minute}`;
+    let options = {
+      hour: "numeric",
+      minute: "numeric",
+      day: "numeric",
+      month: "numeric",
+      year: "numeric",
+    };
+
+    // let locale = navigator.language;
+    labelDate.textContent = new Intl.DateTimeFormat(
+      currentAccount.locale,
+      options
+    ).format(now);
 
     // Clear input fields
     inputLoginUsername.value = inputLoginPin.value = "";
