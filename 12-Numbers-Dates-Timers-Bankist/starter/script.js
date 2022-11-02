@@ -492,7 +492,8 @@ containerApp.style.opacity = 100;
 console.log(Number(future));
 console.log(+future);
 
-let calcDaysPassed = (date1, date2) => (date2 - date1) / (1000 * 60 * 60 * 24);
+let calcDaysPassed = (date1, date2) =>
+  Math.abs(date2 - date1) / (1000 * 60 * 60 * 24);
 
 let days1 = calcDaysPassed(new Date(2037, 3, 14), new Date(2037, 3, 24));
 console.log(days1);
