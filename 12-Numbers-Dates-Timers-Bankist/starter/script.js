@@ -528,6 +528,23 @@ console.log(days1);
 /////////////////////////////////////////////////
 // Internationalizing Numbers (Intl)
 
+let nums = 3884764.23;
+let options = {
+  style: "currency",
+  unit: "celsius",
+  currency: "EUR",
+  useGrouping: true,
+};
+
+console.log("US: ", new Intl.NumberFormat("en-US", options).format(nums));
+console.log("Germany: ", new Intl.NumberFormat("de-DE", options).format(nums));
+console.log("Syria: ", new Intl.NumberFormat("ar-SY", options).format(nums));
+console.log("Scotland: ", new Intl.NumberFormat("en-GB", options).format(nums));
+console.log(
+  "Local: ",
+  new Intl.NumberFormat(navigator.language, options).format(nums)
+);
+
 /////////////////////////////////////////////////
 // Timers: setTimeout and setInterval
 
