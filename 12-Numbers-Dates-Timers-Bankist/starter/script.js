@@ -91,12 +91,11 @@ let formatMovementDate = function (date) {
   if (daysPassed === 0) return "Today";
   if (daysPassed === 1) return "Yesterday";
   if (daysPassed <= 7) return `${daysPassed} days ago`;
-  else {
-    let day = `${date.getDate()}`.padStart(2, 0);
-    let month = `${date.getMonth() + 1}`.padStart(2, 0);
-    let year = date.getFullYear();
-    return `${day}/${month}/${year}`;
-  }
+
+  let day = `${date.getDate()}`.padStart(2, 0);
+  let month = `${date.getMonth() + 1}`.padStart(2, 0);
+  let year = date.getFullYear();
+  return `${day}/${month}/${year}`;
 };
 
 const displayMovements = function (acc, sort = false) {
