@@ -565,5 +565,8 @@ console.log(
 /////////////////////////////////////////////////
 // Timers: setTimeout and setInterval
 
+setTimeout(() => console.log("Here is your pizza 🍕"), 3000);
+console.log("Waiting...");
+
 /////////////////////////////////////////////////
 // Implementing a Countdown Timer
