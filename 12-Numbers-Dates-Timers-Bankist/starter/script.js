@@ -580,5 +580,10 @@ let pizzaTimer = setTimeout(
 
 if (ingredients.includes("spinach")) clearTimeout(pizzaTimer);
 
+setInterval(function () {
+  let now = new Date();
+  console.log(`${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`);
+}, 1000);
+
 /////////////////////////////////////////////////
 // Implementing a Countdown Timer
