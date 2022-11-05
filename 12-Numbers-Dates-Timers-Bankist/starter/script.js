@@ -193,8 +193,10 @@ const updateUI = function (acc) {
 let startLouOutTimer = function () {
   let time = 100;
   setInterval(function () {
-    labelTimer.textContent = time;
-    time = time - 1;
+    let min = time / 60;
+    let sec = time % 60;
+    labelTimer.textContent = `${min}:${sec}`;
+    time--;
   }, 1000);
 };
 
