@@ -190,6 +190,14 @@ const updateUI = function (acc) {
   calcDisplaySummary(acc);
 };
 
+let startLouOutTimer = function () {
+  let time = 100;
+  setInterval(function () {
+    labelTimer.textContent = time;
+    time = time - 1;
+  }, 1000);
+};
+
 ///////////////////////////////////////
 // Event handlers
 let currentAccount;
@@ -236,6 +244,8 @@ btnLogin.addEventListener("click", function (e) {
     // Clear input fields
     inputLoginUsername.value = inputLoginPin.value = "";
     inputLoginPin.blur();
+
+    startLouOutTimer();
 
     // Update UI
     updateUI(currentAccount);
