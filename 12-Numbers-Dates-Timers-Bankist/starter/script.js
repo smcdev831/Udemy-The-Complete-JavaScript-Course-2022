@@ -191,7 +191,7 @@ const updateUI = function (acc) {
 };
 
 let startLouOutTimer = function () {
-  let time = 100;
+  let time = 105;
   setInterval(function () {
     let min = time / 60;
     let sec = time % 60;
