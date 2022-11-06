@@ -191,19 +191,22 @@ const updateUI = function (acc) {
 };
 
 let startLogOutTimer = function () {
-  let time = 300;
-  setInterval(function () {
+  let tick = function () {
     let min = String(Math.trunc(time / 60)).padStart(2, 0);
     let sec = String(time % 60).padStart(2, 0);
     labelTimer.textContent = `${min}:${sec}`;
     time--;
 
     if (time === 0) {
-      clearInterval(time);
+      clearInterval(timer);
       labelWelcome.textContent = "Log in to get started";
       containerApp.style.opacity = 0;
     }
-  }, 1000);
+  };
+
+  let time = 5;
+  tick();
+  let timer = setInterval(tick, 1000);
 };
 
 ///////////////////////////////////////
