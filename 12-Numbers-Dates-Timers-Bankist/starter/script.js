@@ -190,11 +190,11 @@ const updateUI = function (acc) {
   calcDisplaySummary(acc);
 };
 
-let startLouOutTimer = function () {
-  let time = 105;
+let startLogOutTimer = function () {
+  let time = 100;
   setInterval(function () {
-    let min = time / 60;
-    let sec = time % 60;
+    let min = String(Math.trunc(time / 60)).padStart(2, 0);
+    let sec = String(time % 60).padStart(2, 0);
     labelTimer.textContent = `${min}:${sec}`;
     time--;
   }, 1000);
@@ -247,7 +247,7 @@ btnLogin.addEventListener("click", function (e) {
     inputLoginUsername.value = inputLoginPin.value = "";
     inputLoginPin.blur();
 
-    startLouOutTimer();
+    startLogOutTimer();
 
     // Update UI
     updateUI(currentAccount);
