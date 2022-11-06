@@ -195,16 +195,16 @@ let startLogOutTimer = function () {
     let min = String(Math.trunc(time / 60)).padStart(2, 0);
     let sec = String(time % 60).padStart(2, 0);
     labelTimer.textContent = `${min}:${sec}`;
-    time--;
 
     if (time === 0) {
       clearInterval(timer);
       labelWelcome.textContent = "Log in to get started";
       containerApp.style.opacity = 0;
     }
+    time--;
   };
 
-  let time = 300;
+  let time = 5;
   tick();
   let timer = setInterval(tick, 1000);
 };
