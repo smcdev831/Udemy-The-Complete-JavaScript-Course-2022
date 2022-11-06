@@ -42,6 +42,10 @@ document.addEventListener("keydown", function (e) {
 ///////////////////////////////////////
 // Selecting, Creating, and Deleting Elements
 
+console.log(document.documentElement);
+console.log(document.head);
+console.log(document.body);
+
 ///////////////////////////////////////
 // Styles, Attributes, and Classes
 
