@@ -191,12 +191,18 @@ const updateUI = function (acc) {
 };
 
 let startLogOutTimer = function () {
-  let time = 300;
+  let time = 5;
   setInterval(function () {
     let min = String(Math.trunc(time / 60)).padStart(2, 0);
     let sec = String(time % 60).padStart(2, 0);
     labelTimer.textContent = `${min}:${sec}`;
     time--;
+
+    if (time === 0) {
+      clearInterval(timer);
+      labelWelcome.textContent = "Log in to get started";
+      containerApp.style.opacity = 0;
+    }
   }, 1000);
 };
 
@@ -540,9 +546,9 @@ console.log(future);
 /////////////////////////////////////////////////
 // Adding Dates to 'Bankist' App
 
-currentAccount = account1;
-updateUI(currentAccount);
-containerApp.style.opacity = 100;
+// currentAccount = account1;
+// updateUI(currentAccount);
+// containerApp.style.opacity = 100;
 
 /////////////////////////////////////////////////
 // Operations with Dates
