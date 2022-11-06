@@ -204,7 +204,7 @@ let startLogOutTimer = function () {
     }
   };
 
-  let time = 5;
+  let time = 300;
   tick();
   let timer = setInterval(tick, 1000);
 };
