@@ -191,7 +191,7 @@ const updateUI = function (acc) {
 };
 
 let startLogOutTimer = function () {
-  let time = 5;
+  let time = 300;
   setInterval(function () {
     let min = String(Math.trunc(time / 60)).padStart(2, 0);
     let sec = String(time % 60).padStart(2, 0);
