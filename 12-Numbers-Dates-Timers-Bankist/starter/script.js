@@ -199,7 +199,7 @@ let startLogOutTimer = function () {
     time--;
 
     if (time === 0) {
-      clearInterval(timer);
+      clearInterval(time);
       labelWelcome.textContent = "Log in to get started";
       containerApp.style.opacity = 0;
     }
