@@ -46,6 +46,10 @@ console.log(document.documentElement);
 console.log(document.head);
 console.log(document.body);
 
+document.querySelector(".header");
+let allSections = document.querySelectorAll(".section");
+console.log(allSections);
+
 ///////////////////////////////////////
 // Styles, Attributes, and Classes
 
