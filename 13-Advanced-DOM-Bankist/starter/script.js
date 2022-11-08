@@ -50,6 +50,10 @@ document.querySelector(".header");
 let allSections = document.querySelectorAll(".section");
 console.log(allSections);
 
+document.getElementById("section--1");
+let allButtons = document.getElementsByTagName("button");
+console.log(allButtons);
+
 ///////////////////////////////////////
 // Styles, Attributes, and Classes
 
