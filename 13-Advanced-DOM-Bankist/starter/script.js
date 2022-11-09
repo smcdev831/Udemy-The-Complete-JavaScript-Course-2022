@@ -54,6 +54,8 @@ document.getElementById("section--1");
 let allButtons = document.getElementsByTagName("button");
 console.log(allButtons);
 
+document.getElementsByClassName("btn");
+
 ///////////////////////////////////////
 // Styles, Attributes, and Classes
 
