@@ -46,7 +46,7 @@ console.log(document.documentElement);
 console.log(document.head);
 console.log(document.body);
 
-document.querySelector(".header");
+let header = document.querySelector(".header");
 let allSections = document.querySelectorAll(".section");
 console.log(allSections);
 
@@ -58,6 +58,11 @@ document.getElementsByClassName("btn");
 
 let message = document.createElement("div");
 message.classList.add("cookie-message");
+message.textContent = "We use cookies for improved functionality and analytics";
+message.innerHTML =
+  "We use cookies for improved functionality and analytics" <button class="btn btn--close-cookie">Got it!</button>;
+
+
 
 ///////////////////////////////////////
 // Styles, Attributes, and Classes
