@@ -67,6 +67,12 @@ header.append(message);
 
 header.before(message);
 
+document
+  .querySelector(".btn--close-cookie")
+  .addEventListener("click", function () {
+    message.remove();
+  });
+
 ///////////////////////////////////////
 // Styles, Attributes, and Classes
 
