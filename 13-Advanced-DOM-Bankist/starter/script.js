@@ -65,6 +65,8 @@ header.prepend(message);
 header.append(message);
 // header.prepend(message.cloneNode(true));
 
+header.before(message);
+
 ///////////////////////////////////////
 // Styles, Attributes, and Classes
 
