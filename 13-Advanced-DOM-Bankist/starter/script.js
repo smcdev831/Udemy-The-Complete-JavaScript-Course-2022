@@ -56,6 +56,9 @@ console.log(allButtons);
 
 document.getElementsByClassName("btn");
 
+let message = document.createElement("div");
+message.classList.add("cookie-message");
+
 ///////////////////////////////////////
 // Styles, Attributes, and Classes
 
