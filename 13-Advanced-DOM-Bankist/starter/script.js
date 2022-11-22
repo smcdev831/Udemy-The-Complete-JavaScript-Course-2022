@@ -65,7 +65,7 @@ header.prepend(message);
 header.append(message);
 // header.prepend(message.cloneNode(true));
 
-header.before(message);
+// header.before(message);
 
 document
   .querySelector(".btn--close-cookie")
@@ -75,6 +75,9 @@ document
 
 ///////////////////////////////////////
 // Styles, Attributes, and Classes
+
+message.style.backgroundColor = "#37383d";
+message.style.width = "120%";
 
 ///////////////////////////////////////
 // Implementing Smooth Scrolling
