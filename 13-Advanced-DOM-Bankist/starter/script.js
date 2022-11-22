@@ -65,7 +65,7 @@ header.prepend(message);
 header.append(message);
 // header.prepend(message.cloneNode(true));
 
-// header.before(message);
+header.before(message);
 
 document
   .querySelector(".btn--close-cookie")
