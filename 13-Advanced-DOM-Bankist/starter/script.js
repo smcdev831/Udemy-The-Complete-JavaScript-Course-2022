@@ -86,7 +86,7 @@ console.log(getComputedStyle(message).color);
 console.log(getComputedStyle(message).height);
 
 message.style.height =
-  Number.parseFloat(getComputedStyle(message).height, 10) + 40 + "px";
+  Number.parseFloat(getComputedStyle(message).height, 10) + 30 + "px";
 
 console.log(message.style.height);
 
