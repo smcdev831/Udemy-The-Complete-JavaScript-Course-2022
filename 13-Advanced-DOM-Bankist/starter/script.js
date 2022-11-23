@@ -90,7 +90,13 @@ message.style.height =
 
 console.log(message.style.height);
 
-document.documentElement.style.setProperty("--color-primary", "orangered");
+// document.documentElement.style.setProperty("--color-primary", "orangered");
+
+let logo = document.querySelector(".nav__logo");
+console.log(logo.alt);
+console.log(logo.src);
+console.log(logo.className);
+console.log(logo.designer);
 
 ///////////////////////////////////////
 // Implementing Smooth Scrolling
