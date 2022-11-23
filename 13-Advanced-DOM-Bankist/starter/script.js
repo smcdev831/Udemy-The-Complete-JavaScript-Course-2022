@@ -90,6 +90,8 @@ message.style.height =
 
 console.log(message.style.height);
 
+document.documentElement.style.setProperty("--color-primary", "orangered");
+
 ///////////////////////////////////////
 // Implementing Smooth Scrolling
 
