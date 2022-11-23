@@ -96,7 +96,14 @@ let logo = document.querySelector(".nav__logo");
 console.log(logo.alt);
 console.log(logo.src);
 console.log(logo.className);
+
+logo.alt = "Beautiful minimalist logo";
+
+//Non-standard
 console.log(logo.designer);
+console.log(logo.getAttribute("designer"));
+
+logo.setAttribute("company", "Bankist");
 
 ///////////////////////////////////////
 // Implementing Smooth Scrolling
