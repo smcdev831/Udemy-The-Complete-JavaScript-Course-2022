@@ -94,7 +94,6 @@ console.log(message.style.height);
 
 let logo = document.querySelector(".nav__logo");
 console.log(logo.alt);
-console.log(logo.src);
 console.log(logo.className);
 
 logo.alt = "Beautiful minimalist logo";
@@ -104,6 +103,17 @@ console.log(logo.designer);
 console.log(logo.getAttribute("designer"));
 
 logo.setAttribute("company", "Bankist");
+
+console.log(logo.src);
+console.log(logo.getAttribute("src"));
+
+let link = document.querySelector(".twitter-link");
+console.log(link.href);
+console.log(link.getAttribute("href"));
+
+link = document.querySelector(".btn--show-modal");
+console.log(link.href);
+console.log(link.getAttribute("href"));
 
 ///////////////////////////////////////
 // Implementing Smooth Scrolling
