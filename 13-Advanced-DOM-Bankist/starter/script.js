@@ -117,6 +117,11 @@ console.log(link.getAttribute("href"));
 
 console.log(logo.dataset.versionNumber);
 
+logo.classList.add("c", "j");
+logo.classList.remove("c", "j");
+logo.classList.toggle("c");
+logo.classList.contains("c");
+
 ///////////////////////////////////////
 // Implementing Smooth Scrolling
 
