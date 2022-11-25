@@ -115,6 +115,8 @@ link = document.querySelector(".btn--show-modal");
 console.log(link.href);
 console.log(link.getAttribute("href"));
 
+console.log(logo.dataset.versionNumber);
+
 ///////////////////////////////////////
 // Implementing Smooth Scrolling
 
