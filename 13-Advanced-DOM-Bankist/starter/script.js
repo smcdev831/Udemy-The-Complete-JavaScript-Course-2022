@@ -117,6 +117,9 @@ console.log(link.getAttribute("href"));
 
 console.log(logo.dataset.versionNumber);
 
+//DO NOT USE - Overrides all classes
+// logo.className = "jonas";
+
 logo.classList.add("c", "j");
 logo.classList.remove("c", "j");
 logo.classList.toggle("c");
