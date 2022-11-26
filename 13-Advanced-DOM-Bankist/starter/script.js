@@ -128,6 +128,23 @@ logo.classList.contains("c");
 ///////////////////////////////////////
 // Implementing Smooth Scrolling
 
+let buttonScrollTo = document.querySelector(".btn--scroll-to");
+let section1 = document.querySelector("#section--1");
+
+buttonScrollTo.addEventListener("click", function (e) {
+  let s1coords = section1.getBoundingClientRect();
+  console.log(s1coords);
+  console.log(e.target.getBoundingClientRect());
+  console.log("Current scroll (X/Y)", window.pageXOffset, window.pageYOffset);
+  console.log(
+    "Height and Width of viewport",
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth
+  );
+
+  window.scrollTo(s1coords.left, s1coords.top);
+});
+
 ///////////////////////////////////////
 // Types of Events and Event Handlers
 
