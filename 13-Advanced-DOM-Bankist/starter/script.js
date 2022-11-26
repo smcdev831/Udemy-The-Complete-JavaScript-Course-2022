@@ -142,7 +142,10 @@ buttonScrollTo.addEventListener("click", function (e) {
     document.documentElement.clientWidth
   );
 
-  window.scrollTo(s1coords.left, s1coords.top);
+  window.scrollTo(
+    s1coords.left + window.pageXOffset,
+    s1coords.top + window.pageYOffset
+  );
 });
 
 ///////////////////////////////////////
