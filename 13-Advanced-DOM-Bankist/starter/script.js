@@ -159,10 +159,19 @@ buttonScrollTo.addEventListener("click", function (e) {
 ///////////////////////////////////////
 // Types of Events and Event Handlers
 
-let h1 = document.querySelector("h1");
-h1.addEventListener("mouseenter", function (e) {
+let alertH1 = function (e) {
   alert("addEventLister: Great! You are reading the heading");
-});
+
+  h1.removeEventListener("mouseenter", alertH1);
+};
+
+let h1 = document.querySelector("h1");
+
+h1.addEventListener("mouseenter", alertH1);
+
+// h1.onmouseenter = alertH1;
+
+setTimeout(() => h1.removeEventListener("mouseenter", alertH1), 3000);
 
 ///////////////////////////////////////
 // Event Propagation: Bubbling and Capturing
