@@ -203,6 +203,15 @@ console.log(randomColor(0, 255));
 ///////////////////////////////////////
 // Event Delegation: Implementing Page Navigation
 
+// document.querySelectorAll(".nav__link").forEach(function (el) {
+//   el.addEventListener("click", function (e) {
+//     e.preventDefault();
+//     let id = this.getAttribute("href");
+//     console.log(id);
+//     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+//   });
+// });
+
 ///////////////////////////////////////
 // DOM Traversing
 
