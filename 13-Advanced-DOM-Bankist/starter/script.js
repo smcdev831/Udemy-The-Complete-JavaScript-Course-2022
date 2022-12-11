@@ -179,6 +179,11 @@ setTimeout(() => h1.removeEventListener("mouseenter", alertH1), 3000);
 ///////////////////////////////////////
 // Event Propagation in Practice
 
+let randInt = (min, max) => Math.floor(Math.random() * (max - min + 1));
+let randomColor = () =>
+  `rgb(${randInt(0, 255)},${randInt(0, 255)},${randInt(0, 255)})`;
+console.log(randomColor(0, 255));
+
 ///////////////////////////////////////
 // Event Delegation: Implementing Page Navigation
 
