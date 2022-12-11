@@ -184,21 +184,21 @@ let randomColor = () =>
   `rgb(${randInt(0, 255)},${randInt(0, 255)},${randInt(0, 255)})`;
 console.log(randomColor(0, 255));
 
-document.querySelector(".nav").addEventListener("click", function (e) {
-  console.log("Nav", e.target, e.currentTarget);
-  this.style.backgroundColor = randomColor();
-  e.stopPropagation();
-});
+// document.querySelector(".nav").addEventListener("click", function (e) {
+//   console.log("Nav", e.target, e.currentTarget);
+//   this.style.backgroundColor = randomColor();
+//   e.stopPropagation();
+// }, true);
 
-document.querySelector(".nav__link").addEventListener("click", function (e) {
-  console.log("Link", e.target, e.currentTarget);
-  this.style.backgroundColor = randomColor();
-});
+// document.querySelector(".nav__link").addEventListener("click", function (e) {
+//   console.log("Link", e.target, e.currentTarget);
+//   this.style.backgroundColor = randomColor();
+// });
 
-document.querySelector(".nav__links").addEventListener("click", function (e) {
-  console.log("Links", e.target, e.currentTarget);
-  this.style.backgroundColor = randomColor();
-});
+// document.querySelector(".nav__links").addEventListener("click", function (e) {
+//   console.log("Links", e.target, e.currentTarget);
+//   this.style.backgroundColor = randomColor();
+// });
 
 ///////////////////////////////////////
 // Event Delegation: Implementing Page Navigation
