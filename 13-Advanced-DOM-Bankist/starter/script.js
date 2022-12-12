@@ -227,6 +227,10 @@ document.querySelector(".nav__links").addEventListener("click", function (e) {
 ///////////////////////////////////////
 // DOM Traversing
 
+let hh1 = document.querySelector("h1");
+
+console.log(h1.querySelector());
+
 ///////////////////////////////////////
 // Building a Tabbed Component
 
