@@ -238,6 +238,12 @@ console.log(h1.lastElementChild);
 // h1.firstElementChild.style.color = "white";
 // h1.lastElementChild.style.color = "orangered";
 
+console.log(h1.parentNode);
+console.log(h1.parentElement);
+console.log(h1.closest(".header"));
+
+h1.closest(".header").style.background = "var(--gradient-secondary)";
+
 ///////////////////////////////////////
 // Building a Tabbed Component
 
