@@ -229,7 +229,14 @@ document.querySelector(".nav__links").addEventListener("click", function (e) {
 
 let hh1 = document.querySelector("h1");
 
-console.log(h1.querySelector());
+console.log(h1.querySelectorAll(".highlight"));
+console.log(h1.childNodes);
+console.log(h1.children);
+console.log(h1.firstElementChild);
+console.log(h1.lastElementChild);
+
+// h1.firstElementChild.style.color = "white";
+// h1.lastElementChild.style.color = "orangered";
 
 ///////////////////////////////////////
 // Building a Tabbed Component
