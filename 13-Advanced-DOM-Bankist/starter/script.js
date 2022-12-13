@@ -242,7 +242,14 @@ console.log(h1.parentNode);
 console.log(h1.parentElement);
 console.log(h1.closest(".header"));
 
-h1.closest(".header").style.background = "var(--gradient-secondary)";
+// h1.closest(".header").style.background = "var(--gradient-secondary)";
+// h1.closest("h1").style.background = "var(--gradient-primary)";
+
+console.log(h1.previousElementSibling);
+console.log(h1.nextElementSibling);
+console.log(h1.previousSibling);
+console.log(h1.nextSibling);
+console.log(h1.parentElement.children);
 
 ///////////////////////////////////////
 // Building a Tabbed Component
