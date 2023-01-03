@@ -282,30 +282,23 @@ tabsContainer.addEventListener("click", function (e) {
 
 let nav = document.querySelector(".nav");
 
-nav.addEventListener("mouseover", function (e) {
+let handleHover = function (e, opacity) {
   if (e.target.classList.contains("nav__link")) {
     let link = e.target;
     let siblings = link.closest(".nav").querySelectorAll(".nav__link");
     let logo = link.closest(".nav").querySelector("img");
 
     siblings.forEach((el) => {
-      if (el !== link) el.style.opacity = 0.5;
+      if (el !== link) el.style.opacity = opacity;
     });
-    logo.style.opacity = 0.5;
+    logo.style.opacity = opacity;
   }
-});
+};
+
+nav.addEventListener("mouseover", handleHover.bind(0.5));
 
 nav.addEventListener("mouseout", function (e) {
-  if (e.target.classList.contains("nav__link")) {
-    let link = e.target;
-    let siblings = link.closest(".nav").querySelectorAll(".nav__link");
-    let logo = link.closest(".nav").querySelector("img");
-
-    siblings.forEach((el) => {
-      if (el !== link) el.style.opacity = 1;
-    });
-    logo.style.opacity = 1;
-  }
+  handleHover(e, 1);
 });
 
 ///////////////////////////////////////
