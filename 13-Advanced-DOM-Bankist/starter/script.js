@@ -258,6 +258,14 @@ console.log(h1.parentElement.children);
 ///////////////////////////////////////
 // Building a Tabbed Component
 
+let tabs = document.querySelectorAll(".operations__tab");
+let tabsContainer = document.querySelector("operations__tab-container");
+let tabsContent = document.querySelectorAll(".operations__content");
+
+tabsContainer.addEventListener("click", function (e) {
+  e.preventDefault();
+});
+
 ///////////////////////////////////////
 // Passing Arguements to Event Handlers
 
