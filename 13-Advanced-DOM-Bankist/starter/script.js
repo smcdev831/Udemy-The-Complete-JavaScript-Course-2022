@@ -259,11 +259,17 @@ console.log(h1.parentElement.children);
 // Building a Tabbed Component
 
 let tabs = document.querySelectorAll(".operations__tab");
-let tabsContainer = document.querySelector("operations__tab-container");
+let tabsContainer = document.querySelector(".operations__tab-container");
 let tabsContent = document.querySelectorAll(".operations__content");
 
 tabsContainer.addEventListener("click", function (e) {
-  e.preventDefault();
+  let clicked = e.target.closest(".operations__tab");
+  console.log(clicked);
+
+  if (!clicked) return;
+
+  tabs.forEach((t) => t.classList.remove("operations__tab--active"));
+  clicked.classList.add("operations__tab--active");
 });
 
 ///////////////////////////////////////
