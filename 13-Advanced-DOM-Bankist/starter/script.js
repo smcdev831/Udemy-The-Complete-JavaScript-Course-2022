@@ -316,6 +316,33 @@ window.addEventListener("scroll", function (e) {
 
 ///////////////////////////////////////
 // A Better Way: The Intersection Observer
+// let obsCallback = function (entries, observer) {
+//   entries.forEach((entry) => {
+//     console.log(entry);
+//   });
+// };
+
+// let obsOptions = {
+//   root: null,
+//   threshold: [0, 0.2],
+// };
+
+// let observer = new IntersectionObserver(obsCallback, obsOptions);
+// observer.observe(section1);
+
+header = document.querySelector(".header");
+let stickyNav = function (entries) {
+  let [entry] = entries;
+
+  if (!entry.isIntersecting) nav.classList.add("sticky");
+  else nav.classList.remove("sticky");
+};
+
+let headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+});
+headerObserver.observe(header);
 
 ///////////////////////////////////////
 // Revealing Elements on Scroll
