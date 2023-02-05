@@ -351,7 +351,6 @@ headerObserver.observe(header);
 
 let revealSection = function (entries, observer) {
   let [entry] = entries;
-  console.log(entry);
   if (!entry.isIntersecting) return;
   entry.target.classList.remove("section--hidden");
   observer.unobserve(entry.target);
