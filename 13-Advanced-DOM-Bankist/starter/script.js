@@ -369,6 +369,29 @@ allSections.forEach(function (section) {
 ///////////////////////////////////////
 // Lazy Loading Images
 
+let imgTargets = document.querySelectorAll("img[data-src]");
+
+let loadImg = function (entries, observer) {
+  let [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.src = entry.target.dataset.src;
+
+  entry.target.addEventListener("load", function () {
+    entry.target.classList.remove("lazy-img");
+  });
+  observer.unobserve(entry.target);
+};
+
+let imgObserver = new IntersectionObserver(loadImg, {
+  root: null,
+  threshold: 0,
+  rootMargin: "200px",
+});
+
+imgTargets.forEach((img) => imgObserver.observe(img));
+
 ///////////////////////////////////////
 // Building a Slider Component: Part 1
 
