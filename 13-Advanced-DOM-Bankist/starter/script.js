@@ -348,6 +348,15 @@ headerObserver.observe(header);
 
 ///////////////////////////////////////
 // Revealing Elements on Scroll
+let allSections = document.querySelectorAll(".section");
+let revealSection = function (entries, observer) {};
+
+let sectionObserver = new IntersectionObserver(revealSection, {});
+
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add("section--hidden");
+});
 
 ///////////////////////////////////////
 // Lazy Loading Images
