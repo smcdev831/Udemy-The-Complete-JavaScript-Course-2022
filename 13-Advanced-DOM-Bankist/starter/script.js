@@ -395,6 +395,12 @@ imgTargets.forEach((img) => imgObserver.observe(img));
 ///////////////////////////////////////
 // Building a Slider Component: Part 1
 
+let slides = document.querySelectorAll("slide");
+
+let slider = document.querySelector;
+
+slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i})`));
+
 ///////////////////////////////////////
 // Building a Slider Component: Part 2
 
