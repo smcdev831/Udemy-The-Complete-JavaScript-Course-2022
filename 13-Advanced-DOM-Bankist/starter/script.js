@@ -395,11 +395,48 @@ imgTargets.forEach((img) => imgObserver.observe(img));
 ///////////////////////////////////////
 // Building a Slider Component: Part 1
 
-let slides = document.querySelectorAll("slide");
+let slides = document.querySelectorAll(".slide");
+let btnLeft = document.querySelector(".slider__btn--left");
+let btnRight = document.querySelector(".slider__btn--right");
+let currentSlide = 0;
+let maxSlide = slides.length;
 
-let slider = document.querySelector;
+let slider = document.querySelector(".slider");
+slider.style.overflow = "visible";
 
-slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i})`));
+let goToSlide = function (slide) {
+  slides.forEach(
+    (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+  );
+};
+
+goToSlide(0);
+
+let nextSlide = function () {
+  if (currentSlide === maxSlide - 1) {
+    currentSlide = 0;
+  } else {
+    currentSlide++;
+  }
+};
+
+let prevSlide = function () {
+  if (currentSlide === maxSlide - 1) {
+    currentSlide = 0;
+  } else {
+    currentSlide--;
+  }
+};
+
+btnRight.addEventListener("click", function () {
+  goToSlide(currentSlide);
+  nextSlide();
+});
+
+btnLeft.addEventListener("click", function () {
+  goToSlide(currentSlide);
+  nextSlide();
+});
 
 ///////////////////////////////////////
 // Building a Slider Component: Part 2
