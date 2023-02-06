@@ -418,25 +418,21 @@ let nextSlide = function () {
   } else {
     currentSlide++;
   }
+  goToSlide(currentSlide);
 };
 
 let prevSlide = function () {
-  if (currentSlide === maxSlide - 1) {
-    currentSlide = 0;
+  if (currentSlide === 0) {
+    currentSlide = maxSlide - 1;
   } else {
     currentSlide--;
   }
+  goToSlide(currentSlide);
 };
 
-btnRight.addEventListener("click", function () {
-  goToSlide(currentSlide);
-  nextSlide();
-});
+btnRight.addEventListener("click", nextSlide);
 
-btnLeft.addEventListener("click", function () {
-  goToSlide(currentSlide);
-  nextSlide();
-});
+btnLeft.addEventListener("click", prevSlide);
 
 ///////////////////////////////////////
 // Building a Slider Component: Part 2
