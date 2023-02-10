@@ -431,15 +431,6 @@ let prevSlide = function () {
   goToSlide(currentSlide);
 };
 
-btnRight.addEventListener("click", nextSlide);
-
-btnLeft.addEventListener("click", prevSlide);
-
-document.addEventListener("keydown", function (e) {
-  if (e.key === "ArrowLeft") prevSlide();
-  if (e.key === "ArrowRight") nextSlide();
-});
-
 const createDots = function () {
   slides.forEach(function (_, i) {
     dotContainer.insertAdjacentHTML(
@@ -449,6 +440,22 @@ const createDots = function () {
   });
 };
 createDots();
+
+btnRight.addEventListener("click", nextSlide);
+
+btnLeft.addEventListener("click", prevSlide);
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "ArrowLeft") prevSlide();
+  if (e.key === "ArrowRight") nextSlide();
+});
+
+dotContainer.addEventListener("click", function (e) {
+  if (e.target.classList.contains("dots__dot")) {
+    let { slide } = e.target.dataset;
+    goToSlide(slide);
+  }
+});
 
 ///////////////////////////////////////
 // Building a Slider Component: Part 2
