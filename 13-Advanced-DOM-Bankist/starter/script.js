@@ -411,8 +411,6 @@ let goToSlide = function (slide) {
   );
 };
 
-goToSlide(0);
-
 let nextSlide = function () {
   if (currentSlide === maxSlide - 1) {
     currentSlide = 0;
@@ -441,7 +439,6 @@ const createDots = function () {
     );
   });
 };
-createDots();
 
 let activateDot = function (slide) {
   document
@@ -451,6 +448,12 @@ let activateDot = function (slide) {
   document
     .querySelector(`.dots__dot[data-slide="${slide}"]`)
     .classList.add("dots__dot--active");
+};
+
+let init = function () {
+  goToSlide(0);
+  createDots();
+  activateDot(0);
 };
 
 btnRight.addEventListener("click", nextSlide);
@@ -469,6 +472,8 @@ dotContainer.addEventListener("click", function (e) {
     activateDot(slide);
   }
 });
+
+init();
 
 ///////////////////////////////////////
 // Building a Slider Component: Part 2
