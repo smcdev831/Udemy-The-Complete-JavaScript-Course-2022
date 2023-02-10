@@ -398,6 +398,7 @@ imgTargets.forEach((img) => imgObserver.observe(img));
 let slides = document.querySelectorAll(".slide");
 let btnLeft = document.querySelector(".slider__btn--left");
 let btnRight = document.querySelector(".slider__btn--right");
+let dotContainer = document.querySelector(".dots");
 let currentSlide = 0;
 let maxSlide = slides.length;
 
@@ -438,6 +439,16 @@ document.addEventListener("keydown", function (e) {
   if (e.key === "ArrowLeft") prevSlide();
   if (e.key === "ArrowRight") nextSlide();
 });
+
+const createDots = function () {
+  slides.forEach(function (_, i) {
+    dotContainer.insertAdjacentHTML(
+      "beforeend",
+      `<button class="dots__dot" data-slide="${i}"></button>`
+    );
+  });
+};
+createDots();
 
 ///////////////////////////////////////
 // Building a Slider Component: Part 2
